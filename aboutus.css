@@ -1,0 +1,278 @@
+/* floating buttons start */
+.floating{
+    position: fixed;
+    background-color: lightsteelblue;
+    top: 90%;
+    left: 94%;
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    line-height:20px;
+    color: darkblue
+}
+
+.floating2{
+    position: fixed;
+    background-color: lightsteelblue;
+    top: 93%;
+    left: 94%;
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    line-height:20px;
+    color: darkblue
+}
+/* floating buttons end */
+
+/* div navbar start*/
+#this{
+    color: #1E821E;
+    }
+/* div navbar end*/
+
+
+/* div title start*/
+.title{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+    color: black;
+    }
+
+.titletxt1{
+    display: block;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+}
+
+.titletxt2{
+    display: block;
+    position: absolute;
+    color: white;
+    top: 55%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+}
+/* div title end*/
+
+
+/* div plogging start */
+.plogging{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 90%;
+    height: 500px;
+}
+
+.ploggingin{
+    margin-bottom: 100px;
+}
+
+.bigtxt{
+    font-weight: bold;
+}
+
+.advtitle{
+    margin-top: 80px;
+}
+
+.subtxt0{
+    margin-bottom: 80px;
+}
+
+.subtxt{
+    margin-top: 20px;
+}
+
+.ploggingadv {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+}
+
+.advimg-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+}
+  
+.advimg {
+    flex-basis: calc(50% - 10px);
+    margin: 150px -100px;
+    position: relative;
+}
+  
+.adv-desc {
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.adv-desctitle{
+    font-size: large;
+    text-decoration-line: underline;
+    background-color: rgb(238, 188, 131);
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 600px;
+    height: 600px;
+    perspective: 1000px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    color: black;
+}
+  
+.flip-card-back {
+    color: black;
+    transform: rotateY(180deg);
+}
+
+.ploggingdiv{
+    margin-top: 50px;
+    padding-left: 50px;
+}
+
+.ploggingtxt{
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*폰트 나중에 수정*/
+    font-weight: bold;
+}
+
+.earthchart{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#linechart_material{
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.ploggingchange{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.ploggingtxt1{
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: medium;
+}
+
+.ploggingtxt2{
+    margin-bottom: 30px;
+}
+
+.ploggingtxt3{
+    margin-top: 25px;
+}
+
+.line{
+    border: 0;
+    height: 1px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background: darkgray;
+}
+    
+.icon{
+    color: #1E821E;
+}
+/* div plogging end */
+
+
+/* div member start */
+.member{
+    background-color: #f6f6f6;
+    margin-top: 80px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.memberpic:hover{
+    border: 10px solid grey;
+}
+
+.membertxt{
+    margin-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+            
+.glyphicon-heart-empty{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.introducetxt{
+    margin-top: 10px;
+}
+
+.githublink{
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+.sitelink{
+    display: block;
+}
+
+.subtxt2{
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+/* div member end */
+
+/* div link start */
+.sitelink{
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* div link end */
+
+/* div footer start */
+.footer{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 100px;
+    height: 150px;
+    background-color: #5b7b5b;
+}
+/* div footer end */
