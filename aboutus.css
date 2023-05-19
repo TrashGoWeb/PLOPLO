@@ -1,3 +1,46 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-webkit-keyframes shadow-drop-center {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@keyframes shadow-drop-center {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+body{
+    font-family: 'Pretendard-Regular';
+}
+
+
+
+
 /* floating buttons start */
 .floating{
     position: fixed;
@@ -33,9 +76,12 @@
 
 /* div title start*/
 .title{
+    height: 1100px;
+    background-image: url('image/aboutustitle.avif');
+    background-repeat: no-repeat;
+    background-position: cover;
     padding-top: 70px;
     padding-bottom: 70px;
-    position: relative;
     color: black;
     }
 
@@ -43,18 +89,24 @@
     display: block;
     position: absolute;
     color: white;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate( -50%, -50% );
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    font-size: 100px;
 }
 
 .titletxt2{
     display: block;
     position: absolute;
     color: white;
-    top: 55%;
+    top: 70%;
     left: 50%;
     transform: translate( -50%, -50% );
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    font-size: 50px;
 }
 /* div title end*/
 
@@ -65,6 +117,11 @@
     margin-bottom: 70px;
     width: 90%;
     height: 500px;
+    padding-bottom: 700px;
+}
+
+.ploggingdiv{
+    padding-top: 80px;
 }
 
 .ploggingin{
@@ -88,23 +145,33 @@
 }
 
 .ploggingadv {
+    display: grid;
     text-align: center;
-    margin-left: 80px;
-    margin-right: 80px;
     margin-bottom: 80px;
 }
 
-.advimg-container {
+.topBanner{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column nowrap;
+    align-items: center;
     justify-content: center;
-    margin-top: 80px;
+
+}
+
+.advimg-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 550px);
+    align-items: center;
+    justify-items: center;   
+    gap: 50px;
 }
   
-.advimg {
-    flex-basis: calc(50% - 10px);
-    margin: 150px -100px;
+.adv {
+    cursor: pointer;
+    border-radius: 20px;
     position: relative;
+
 }
   
 .adv-desc {
@@ -118,14 +185,19 @@
 .adv-desctitle{
     font-size: large;
     text-decoration-line: underline;
-    background-color: rgb(238, 188, 131);
+    background-color: rgb(242, 245, 174);
+    margin-bottom: 15px;
 }
 
 .flip-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
-    width: 600px;
-    height: 600px;
-    perspective: 1000px;
+    width: 400px;
+    height: 400px
+
 }
   
 .flip-card-inner {
@@ -143,6 +215,7 @@
   
 .flip-card-front, .flip-card-back {
     position: absolute;
+    align-self: center;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
@@ -165,7 +238,6 @@
 
 .ploggingtxt{
     margin-top: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*폰트 나중에 수정*/
     font-weight: bold;
 }
 
@@ -216,29 +288,49 @@
 }
 /* div plogging end */
 
+/* div ploggingchange start */
+#changeimg{
+    cursor: pointer;
+    border-radius: 20px;
+}
+/* div ploggingchange end */
+
 
 /* div member start */
+.icon1{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding-right: 7px;
+    padding-bottom: 8px;
+}
+
 .member{
     background-color: #f6f6f6;
     margin-top: 80px;
     padding-top: 70px;
     padding-bottom: 70px;
+    border-radius: 20px;
 }
 
 .memberpic:hover{
-    border: 10px solid grey;
+    border: 5px solid lightgrey;
+    cursor: pointer;
+}
+
+.shadow-drop-center:hover{
+    -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.memname{
+    margin-top: 15px;
 }
 
 .membertxt{
     margin-top: 20px;
     padding-left: 70px;
     padding-right: 70px;
-}
-            
-.glyphicon-heart-empty{
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .introducetxt{
@@ -264,6 +356,20 @@
 .sitelink{
     text-align: center;
     margin-bottom: 10px;
+}
+
+#rel_site{
+    color: gray;
+    font-weight: 500;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.icon2{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 /* div link end */
 
