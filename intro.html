@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>intro</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        body{
+            width:100%;
+            height:98%;
+            background-image: url("image/bg2.jpg");
+            background-size: cover;
+            font-family: 'Pretendard-Regular';
+        }
+        #intro-content{
+            width:100%;
+            height:100%;
+            
+        }
+        
+        .highlight{
+            transform:scale(1.5);
+        }
+        .trash{
+            position: absolute;
+            
+        }
+        #trash1{
+            left: 40%;
+            top: 80%;
+            transform: rotate(40deg);
+        }
+        #trash2{
+            left: 70%;
+            top: 80%;
+            transform: rotate(225deg);
+        }
+        #trash3{
+            left: 25%;
+            top: 85%;
+            transform: rotate(10deg);
+        }
+        #trash4{
+            left: 45%;
+            top: 75%;
+            transform: rotate(45deg);
+        }
+        #trash5{
+            left: 85%;
+            top: 85%;
+            transform: rotate(45deg);
+        }
+        #trash6{
+            left: 60%;
+            top: 70%;
+            transform: rotate(100deg);
+        }
+        
+        #page1{
+            width:100%;
+            height: 100%;
+            background-image: url("image/bg2.jpg");
+            background-size: cover;
+            position: absolute;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #page2{
+            width:100%;
+            height: 100%;
+            background-image: url("image/bg2.jpg");
+            background-size: cover;
+            position: absolute;
+            display: none;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .content{
+    width: 80%;
+    margin: auto;
+}
+
+.title{
+    background-repeat: no-repeat;
+    background-position: cover;
+    width: 100%;
+    height: 1000px;
+}
+.title2{
+    background-color: white;
+    width: 100%;
+    height: 1000px;
+}
+
+.titletxt1{
+    display: block;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    font-size: 100px;
+}
+
+.titletxt2{
+    display: block;
+    position: absolute;
+    color: white;
+    top: 65%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    font-size: 50px;
+}
+
+
+    </style>
+    <script>
+        
+        const modal = document.getElementById("modal")
+        var trash_cnt = 6;
+        var x=10;
+        
+        
+        
+        function trashClicked(who){
+            who.remove();
+            trash_cnt--;
+            x +=15;
+            document.getElementById( 'progress' ).setAttribute( 'style', 'width:' + x.toString() +'%' )
+
+            if(trash_cnt==0){
+                page2show();
+            }
+        }
+        function page2show(){
+            $("#page2").slideDown(3000);
+        }
+        
+        $(document).ready(function(){
+            
+
+          $(".trash").mouseenter(function(){
+            $(this).addClass("highlight");
+          });
+          $(".trash").mouseleave(function(){
+            $(this).removeClass("highlight");
+          });
+          
+          
+
+        });
+    </script>
+</head>
+<body>
+    <div id="intro-content">
+        
+        <div id="page1">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
+            </div>
+            <img src="image/trash1.png" onclick="trashClicked(this)" class="trash" id="trash1" hegiht="80" width="80">
+            <img src="image/trash2.png" onclick="trashClicked(this)" class="trash" id="trash2" hegiht="80" width="80">
+            <img src="image/trash3.png" onclick="trashClicked(this)" class="trash" id="trash3" hegiht="80" width="80">
+            <img src="image/trash4.png" onclick="trashClicked(this)" class="trash" id="trash4" hegiht="80" width="80">
+            <img src="image/trash5.png" onclick="trashClicked(this)" class="trash" id="trash5" hegiht="80" width="80">
+            <img src="image/trash6.png" onclick="trashClicked(this)" class="trash" id="trash6" hegiht="50" width="50">
+        </div>
+        
+
+
+        <div id="page2">
+            
+            <div class="container-fluid text-center title">
+                <h1 class="titletxt1">Trash Go !</h1>
+                <h2 class="titletxt2">안녕하세요</h2>
+            </div>
+            <br>
+            <div class="container-fluid text-center title2">
+                <h1 class="titletxt1">Trash Go !</h1>
+                <h2 class="titletxt2">안녕하세요</h2>
+            </div>
+            
+        </div>
+
+
+        
+
+        
+
+    </div>
+    
+    
+
+    
+    
+</body>
+</html>
