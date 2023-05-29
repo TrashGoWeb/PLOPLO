@@ -38,82 +38,87 @@ body{
     font-family: 'Pretendard-Regular';
 }
 
-
-
-
-/* floating buttons start */
-.floating{
-    position: fixed;
-    background-color: lightsteelblue;
-    top: 90%;
-    left: 94%;
-    text-align: center;
-    width: 80px;
-    height: 20px;
-    line-height:20px;
-    color: darkblue
+.animate {
+    animation: fadeIn 2.2s;
 }
 
-.floating2{
-    position: fixed;
-    background-color: lightsteelblue;
-    top: 93%;
-    left: 94%;
-    text-align: center;
-    width: 80px;
-    height: 20px;
-    line-height:20px;
-    color: darkblue
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-/* floating buttons end */
 
 /* div navbar start*/
-#this{
-    color: #1E821E;
-    }
+#nav{
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    height: 80px;
+    width: 100%;
+    background-color: lightgrey;
+    color:black;
+}
+.nav-container{
+    
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 80;
+    list-style-type: none;
+}
+.nav-item{
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top:15px;
+    padding-top:10px;
+    width:250px;
+    height:50px;
+}
+.nav-home{
+  cursor: pointer;
+  margin-top: 15px;
+  width:250px;
+  background-color: lightgrey;
+}
+.nav-item:hover {
+  border:1px solid black;
+  
+}
+
+#loginbt{
+  margin-top: 20px;
+}
+.slider{
+  margin:0 auto;
+  width: 60%;
+}
+.nav-container-in{
+  display: none;
+  list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+.nav-item-in{
+  text-align: left;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top:15px;
+    padding-top:10px;
+    width:250px;
+    height:50px;
+    background-color: transparent;
+    color:black;
+}
 /* div navbar end*/
-
-
-/* div title start*/
-.title{
-    height: 1100px;
-    background-image: url('image/aboutustitle.avif');
-    background-repeat: no-repeat;
-    background-position: cover;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    color: black;
-    }
-
-.titletxt1{
-    display: block;
-    position: absolute;
-    color: white;
-    top: 60%;
-    left: 50%;
-    transform: translate( -50%, -50% );
-    font-family: 'GmarketSansMedium';
-    font-weight: 700;
-    font-size: 100px;
-}
-
-.titletxt2{
-    display: block;
-    position: absolute;
-    color: white;
-    top: 70%;
-    left: 50%;
-    transform: translate( -50%, -50% );
-    font-family: 'GmarketSansMedium';
-    font-weight: 700;
-    font-size: 50px;
-}
-/* div title end*/
 
 
 /* div plogging start */
 .plogging{
-    margin-top: 70px;
+    margin-top: 200px;
     margin-bottom: 70px;
     width: 90%;
     height: 500px;
@@ -371,14 +376,20 @@ body{
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+.link{
+    margin-bottom: 100px;
+}
 /* div link end */
 
 /* div footer start */
 .footer{
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 100px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
     height: 150px;
-    background-color: #5b7b5b;
-}
+    width: 100%;
+    background-color: lightgrey;
+    color:black;
+  }
 /* div footer end */
