@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="ploggingcourse.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+    <title>Plogging Course</title>
+</head>
+<body>
+
+    <!--div nav-->
+    <div id="nav">
+        <ul class="nav-container">
+            
+            <li class="nav-home"><img src="image/logo2.png" onClick="location.href='main.html'" width="250" height="50"></li>
+            
+            <li class="nav-item" id="act2">ACTIVITY<ul class="nav-container-in">
+              <li class="nav-item-in">SELF CHECK</li>
+              <li class="nav-item-in">PLOGGING COURSE</li>
+            </ul></li>
+  
+            <li class="nav-item" id="act1">COMUNITY<ul class="nav-container-in">
+              <li class="nav-item-in">공지사항</li>
+              <li class="nav-item-in">게시판</li>
+            </ul></li>
+            
+            <li class="nav-item">ABOUT US</li>
+            <li><button type="button" style="margin-left:600px;" id="loginbt" class="btn btn-outline-primary" onClick="location.href='login.html'">LOGIN</button></li>
+        </ul>
+        
+    </div>
+    
+    <!---div content-->
+    <div class="content">
+
+        <div class="titletxt">
+            <h2 class="bigtxt ploggingtitle">Plogging Course</h2>
+            <p class="subtxt0">국내의 플로깅 명소들입니다.</p>
+        </div>
+        
+        <!---div search-->
+        <div class="search">
+            <form action="/search">
+                <input type="text" placeholder="지역 명 검색" class="searchbox">
+                <input type="submit" value="검색" class="searchbtn">
+            </form>
+        </div>
+
+        <!--div course-->
+        <div class="course">
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course1.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[서울] 서울 한강</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>2.2km</b>  소요시간: <b>40분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 서울 마리나 - 서강대교 하단 - 마포대교 하단 - 이벤트 광장</p>     
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">플로깅 초심자라면 물길을 따라 산책로가 잘 정비된 코스에서 시도해 보길 추천합니다. 한강의 조깅 코스에서 2km, 4km 등 달리는 구간을 차근차근 늘려가며 진행하다 보면 초보자도 쉽게 실천할 수 있습니다.
+                        피크닉을 즐기고 난 뒤 버려진 쓰레기가 많은 봄 공원도 플로깅에 적합한 장소입니다. 평지라 수월하게 달리기 가능하고, 다양한 플로깅 캠페인이 많아 모두 같이 참여도 가능해요.</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course2.jfif" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[제주] 제주 올레길</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>11km</b>  소요시간: <b>180분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 쇠소깍 - 서귀포 제주올레여행자센터</p>        
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">제주 올레길은 걷는 여행이라는 취지에 맞게 개발된 길로 마을길, 해안도로, 숲속 오솔길 등 다양한 길로 이루어져 있으며, 제주올레라는 말에는 '제주에 올래?'라는 초대의 의미도 담고 있다고 합니다. 올레길 완주 코스는 제주도 내에 23개 코스가 있다고 하는데요. 상업성 관광지와 무관한 제주도의 일상적인 아름다움을 볼 수 있는 제주 올레길에 가봅시다!</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course3.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[전북][부안] 변산 마실길</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>5km</b>  소요시간: <b>90분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 격포항 - 이순신세트장 - 궁항 - 솔섬</p>   
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">변산 마실길 4코스는 한국의 나포리로 일컬어지는 격포항을 떠나 격포봉화대에 올라 격포항 앞바다를 내려다 볼 수 있는 코스로 이순신 촬영세트장과 해안 펜션 단지, 상록해수욕장을 지나 노을이 아름다운 솔섬에 이르는 구간입니다. 솔섬은 서해바다의 낙조가 가장 아름다운 곳으로 전국의 사진작가들이 즐겨찾는 곳으로 유명하다고 합니다.</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course4.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[경북][안동] 안동 선비순례길</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>13.7km</b>  소요시간: <b>240분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 군자마을(오천유적지) - 보광사 - 선성현문화단지 - 안동호반자연휴양림 - 월천서당</p>   
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">안동호 수면위를 걷는 아주 특별한 경험, 힐링관광의 최적의 장소! 세계유교선비문화공원 탐방로입니다. 안동호의 절경과 다양한 유교문화유적을 함께 즐길 수 있는 자연친화적인 탐방로입니다. 코스 내에 물 위를 걸을 수 있는 선성수상길과 함께 도산서원과 이육사문학관을 비롯하여 고택 등 다양한 볼거리가 있어 천천히 걸으며 힐링관광 할 수 있는 최적의 장소랍니다.</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course5.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[충북][보은] 오리숲길</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>4.5km</b>  소요시간: <b>100분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 속리산 버스터미널 - 오리숲길 입구 - 법주사 - 세조길 입구 - 탈골암 입구 - 세심정 갈림길</p>
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">‘산은 세속을 떠나지 않았으나 세속이 산을 떠났도다’ 속리산 오리숲길과 세조길은 왕복 10여㎞의 산책로로, 주변의 울창한 숲과 산새소리, 맑은 물이 흐르는 속리산 계곡, 수변 데크가 어우러진 풍경이 일품인 플로깅 코스입니다. 백호 임제의 시 구절처럼 ‘속리산 오리숲길과 세조길’을 걷다보면 풍경에 취해 세속을 벗어난 느낌마저 들 정도입니다.</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course6.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[경기][수원] 세계문화유산 코스</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>3.6km</b>  소요시간: <b>80분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 팔달공원 - 화성행궁 - 수원화성 - 방화수류정 - 창룡문</p>
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">최근 각종 드라마 촬영지로 나오면서 각광받고 있는 '수원'!
+                        팔달공원을 시작으로 창룡문까지 총 3.7km의 코스입니다.
+                        세계문화유산으로 지정된 수원화성부터 보물로 지정된 방화수류정까지 만나볼 수 있으며, 조선왕조 제22대 왕 정조의 원대한 꿈과 지극한 효심을 느낄 수 있는 코스입니다.
+                        플로깅 중간중간 다양한 제로웨이스트샵과 비건 음식점은 덤 !
+                        관광과 플로깅을 동시에 할 수 있는 곳을 찾으신다면 수원 플로깅 코스를 추천합니다 !</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course7.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[부산] 부산 갈맷길</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>10km</b>  소요시간: <b>80분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 해운대 해수욕장 - 동백섬 - 영화의거리 - 마린시티 요트경기장 - 영화의 전당 - 민락 수변공원 - 광안리 해수욕장</p>
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">부산 지역 전역으로 조성돼 있는 걷기 좋은 코스, 갈맷길을 배경으로
+                        부산의 대표적인 바다와 해변, 역사가 깃든 명소를 플로깅 코스로 소개해드리겠습니다.
+                        코스는 해운대 해수욕장에서 출발하여 광안리 해수욕장을 끝으로 마무리 됩니다! </p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course8.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[전북][정읍] 내장산 솔티마을</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>2.8km</b>  소요시간: <b>70분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 내장산조각공원 - 솔티마루길 - 솔티달빛생태숲 - 생태놀이터 - 송죽마을 - 내장산조각공원</p>
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">솔티라는 단어, 생소하시다구요?
+                        솔티는 '소나무가 있는 터'라는 뜻으로 순 우리말입니다.
+                        여기 내장산 솔티마을은 아름다운 내장호수와 조각공원을 품은 작은 마을인데요,
+                        탄소발자국 인증을 받은 프로그램을 진행하며 친환경 보호에 앞장서고 있습니다!
+                        내장호수 데크길을 따라 내장산 조각공원에 도착하여 멋진 조형물들을 감상하고
+                        호랑이 표지판을 따라 숨어있는 솔티마을을 찾아가볼까요? 산 속에서 플로깅은 일석이조!
+                        여러분들을 솔티마을로 초대합니다!</p>
+                </div>
+            </div>
+            <div class="subcourseone" onmouseover="overlay(this)">
+                <div class="subcourse">
+                    <img src="image/ploggingcourse/course9.jpg" class="courseimg" width="100%" height="50%">
+                    <h3 class="subcourse-title">[대구] 대구 박물관 코스</h3>
+                    <hr class="line">
+                    <p class="subcourse-contentfront"> 소요거리: <b>2.7km</b>  소요시간: <b>60분</b></p>
+                    <p class="pincourse"><img src="image/ploggingcourse/pin.png" class="pinicon"> 무학숲도서관 - 유아숲체험원 - 생태탐방로 - 무학산 정상 - 국립대구박물관 - 시문학동산 - 유적공원 - 산책로</p>
+                </div>
+                <div class="reaction">
+                    <img src="image/ploggingcourse/like.png" class="icon1"><p class="num">0</p>
+                </div>
+                <div class="overlay">
+                    <p class="subcourse-contentback">대구박물관과 무학숲도서관은 대구광역시 수성구 황금동에 위치하고 있습니다.
+                        아이와 함께 플로깅하며 다양한 숲 체험도 할 수 있는 박물관과 숲 도서관을 소개합니다.
+                        눈길을 끄는 것은 비건에 관련된 책으로 읽다보면 저절로 건강해지는 느낌을 받습니다.
+                        숲 도서관을 지나오면 무학산 유아숲체험원과 모험 놀이터가 있습니다.
+                        이곳은 영유아들을 위해 마련된 놀이터로 들어서자마자 아이들의 웃음소리가 울려퍼집니다.
+                        아이와 함께 플로깅 중 이런 곳을 발견한다면 함께 즐거운 시간을 보낼 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="popluar">
+                <h3 class="bigtxt0">지금 가장 추천 수가 많은 플로깅 코스</h3>
+                <div id="top-container"></div>
+            </div>
+
+            <p id="text"></p>
+           
+
+        </div>
+
+        <!--div pagination-->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+
+    <!--div footer-->
+    <div class="footer">
+        <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
+        <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
+        <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
+        <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
+        <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
+        <br>
+        <p>이것은 푸터입니다. 위에는 학교홈페이지와 저희 깃허브입니다.(블로그일수도)</p>
+        <p>찾아오시는길: 찾아오지말아주세요.</p>
+        <p>2023 3-1학기 오픈소스웹프로젝트</p>
+    </div>
+
+    <!--js-->
+    <script>
+        /*nav js*/
+        $(document).ready(function(){
+            $("#nav").mouseenter(function(){
+                $("#nav").height(200);
+                $(".nav-container-in").show();
+                
+            });
+            $("#nav").mouseleave(function(){
+                $(".nav-container-in").hide();
+                $("#nav").height(80);
+
+            });
+            });
+
+        /*pagination move js*/
+        var pages = document.querySelectorAll('.pagination a');
+
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].addEventListener('click', function(event) {
+                event.preventDefault();
+                var page = event.target.textContent;
+                window.location.href = '/page/' + page;
+            });
+        }
+
+        /*overlay js*/
+        function overlay(element) {
+            let subcourse = element.querySelector('.subcourse');
+            let reaction = element.querySelector('.reaction');
+            
+            subcourse.addEventListener('mouseover', function() {
+                var overlay = element.querySelector('.overlay');
+                var contentBack = element.querySelector('.subcourse-contentback');
+                overlay.style.display = 'block';
+                contentBack.style.display = 'block';
+            });
+
+            subcourse.addEventListener('mouseout', function() {
+                var overlay = element.querySelector('.overlay');
+                var contentBack = element.querySelector('.subcourse-contentback');
+                overlay.style.display = 'none';
+                contentBack.style.display = 'none';
+            });
+            
+            reaction.addEventListener('mouseover', function(event) {
+                event.stopPropagation();
+            });
+            
+            reaction.addEventListener('mouseout', function(event) {
+                event.stopPropagation();
+            });
+        }
+
+        /* top subcourses js */
+        function showTopSubcourse() {
+            let subcoursestop = document.querySelectorAll('.subcourseone');
+            let topSubcourse;
+            let maxNum = 0;
+            
+            subcoursestop.forEach(subcourse => {
+                let num = parseInt(subcourse.querySelector('.num').textContent);
+                if (num > maxNum) {
+                    maxNum = num;
+                    topSubcourse = subcourse;
+                }
+            });
+            
+            let topContainer = document.querySelector('#top-container');
+            topContainer.innerHTML = '';
+            
+            if (topSubcourse) {
+                let title = topSubcourse.querySelector('.subcourse-title').textContent;
+                let titleElement = document.createElement('p');
+                titleElement.textContent = title;
+                titleElement.style.fontWeight = "bold";
+                titleElement.style.fontSize = "large";
+                titleElement.style.display = "flex";
+                titleElement.style.flexDirection = "column";
+                titleElement.style.alignItems = "center";
+                titleElement.style.marginTop = "10px";
+                topContainer.appendChild(titleElement);
+
+                let topSubcourseCopy = topSubcourse.cloneNode(true);
+                topContainer.appendChild(topSubcourseCopy);
+                topContainer.style.display = "flex";
+                topContainer.style.flexDirection = "column";
+                topContainer.style.alignItems = "center";
+            
+            }
+        }
+
+        let subcoursestop = document.querySelectorAll('.subcourseone');
+        subcoursestop.forEach(subcourse => {
+            let reactionImg = subcourse.querySelector('.reaction img');
+            let num = subcourse.querySelector('.num');
+            reactionImg.addEventListener('click', () => {
+                let currentNum = parseInt(num.textContent);
+                num.textContent = currentNum + 1;
+                showTopSubcourse();
+            });
+        });
+
+        /*search js*/
+        let searchBtn = document.querySelector('.searchbtn');
+        let footer = document.querySelector('.footer');
+        searchBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            let subcourses = document.querySelectorAll('.subcourseone');
+            for (let i = 0; i < subcourses.length; i++) {
+                subcourses[i].style.display = "inline-block";
+                subcourses[i].style.marginTop = "50px";
+                subcourses[i].style.marginLeft = "20px";
+                subcourses[i].style.marginRight = "20px";
+                subcourses[i].style.marginBottom = "50px";
+            }
+            let keyword = document.querySelector('.searchbox').value;
+            let elements = document.querySelectorAll('.subcourseone');
+            let textElement = document.querySelector('#text');
+            if (keyword === "") {
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.display = "inline-block";
+                    elements[i].style.marginTop = "50px";
+                    elements[i].style.marginLeft = "20px";
+                    elements[i].style.marginRight = "20px";
+                    elements[i].style.marginBottom = "50px";
+                }
+                textElement.style.display ="none";
+            } else {
+                let resultCount = 0;
+                for (let i = 0; i < elements.length; i++) {
+                    if (!elements[i].textContent.includes(keyword)) {
+                        elements[i].style.display = "none";
+                    } else {
+                        resultCount++;
+                    }
+                }
+                if (resultCount === 0) {
+                    textElement.textContent = "검색 결과가 없습니다.";
+                    textElement.style.display ="inline";
+                } else {
+                    textElement.style.display ="none";
+                }
+            }
+        });
+
+        /*reaction num js*/
+        let subcourses = document.querySelectorAll('.subcourseone');
+        subcourses.forEach(subcourse => {
+            let reactionImg = subcourse.querySelector('.reaction img');
+            let num = subcourse.querySelector('.num');
+            reactionImg.addEventListener('click', () => {
+                let currentNum = parseInt(num.textContent);
+                num.textContent = currentNum + 1;
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
