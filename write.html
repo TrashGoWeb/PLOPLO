@@ -38,7 +38,6 @@
 
     <div class="board_wrap">
         <div class="board_title">
-            <br><br><br><br><br><br><br>
             <strong>게시판</strong>
         </div>
 
@@ -62,8 +61,19 @@
                 <button style="display: inline-block; width:60px;height: 40px;background-color: #FDDCAA; border: none; font-size: 23px; border-radius: 5px;" onclick="cancel()">취소</button>
             </div><!--버튼 div-->
         </div>
+     
     </div>
-
+    <div class="footer">
+        <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
+        <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
+        <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
+        <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
+        <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
+        <br>
+        <p>이것은 푸터입니다. 위에는 학교홈페이지와 저희 깃허브입니다.(블로그일수도)</p>
+        <p>찾아오시는길: 찾아오지말아주세요.</p>
+        <p>2023 3-1학기 오픈소스웹프로젝트</p>
+      </div>
     <script>
         function movelist() {
             alert("글이 등록되었습니다.");
@@ -75,12 +85,12 @@
         }
 
         $(document).ready(function(){
-      $("#nav").mouseenter(function(){
+        $("#nav").mouseenter(function(){
         $("#nav").height(200);
-        $(".nav-container-in").show();
-        
+        $(".nav-container-in").show(); 
       });
-      $("#nav").mouseleave(function(){
+      
+        $("#nav").mouseleave(function(){
         $(".nav-container-in").hide();
         $("#nav").height(80);
 

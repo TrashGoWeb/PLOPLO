@@ -6,12 +6,14 @@
 }
 body{
     font-family: 'Pretendard-Regular';
+    
 }
 
 <!-------------글목록----------------->   
 .board_wrap { 
     width: 80%;
     box-sizing: border-box;
+    flex-grow: 1;
     
 }
 .board_list .date {
@@ -198,7 +200,7 @@ a {
 .board_view {
     width: 100%;
     border-top: 2px solid #000;
-    background-color: beige;
+    background-color: white;
 }
 
 .board_view .title {
@@ -229,8 +231,6 @@ a {
     height: 13px;
     background: #ddd;
 }
-
-
 
 .board_view .info dl dt,
 .board_view .info dl dd {
@@ -315,68 +315,97 @@ a {
 .line:hover{
     background-color: #fff;
 }
+.btn{
+    margin-left: 650px;
+    margin-top: -50px;
+}
+.footer{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 150px;
+    width: 100%;
+    background-color: #EDF1D6;
+    color:black;
+   
+}
+
 
 #nav{
     text-align: center;
-    position: fixed;
+    
     z-index: 1;
-    top:0;
-    height: 80px;
-  width: 100%;
-  background-color: #EDF1D6;
-  color:black;
+    min-height: 80px;
+    height: auto;
+    width: 100%;
+    background-color: lightgrey;
+    border-bottom: solid 1px black;
+    color:black;
 }
-.nav-container{  
+
+.nav-container{
     display: flex;
-    justify-content: left;
-    text-align: left;
     flex-direction: row;
     width: 100%;
     margin: 0;
     padding: 80;
     list-style-type: none;
 }
+
 .nav-item{
     text-align: center;
     cursor: pointer;
+    padding-top: 10px;
+    margin-top: 15px;
     font-size: 20px;
-    margin-top:15px;
-    padding-top:10px;
     width:250px;
     height:50px;
 }
+
 .nav-home{
-  cursor: pointer;
-  margin-top: 15px;
-  width:250px;
-  background-color: #EDF1D6;
+    cursor: pointer;
+    margin-top: 15px;
+    width:250px;
+    background-color: lightgrey;
 }
+
 .nav-item:hover {
-  border:1px solid black;
-  
+    border: 1px solid black;
 }
 
 #loginbt{
-  margin-top: 20px;
+    margin-top: 20px;
 }
-.slider{
-  margin:0 auto;
-  width: 60%;
-}
+
 .nav-container-in{
-  display: none;
-  list-style-type: none;
-    text-align: center;
+    display: none;
+    list-style-type: none;
+    padding-top: 10px;
+    background-color: lightgrey;
     width: 100%;
 }
+#act2 .nav-container-in {
+    position: absolute;
+    left: 250px;
+    top: 80px;
+}
+
+#act1 .nav-container-in {
+    position: absolute;
+    left: 495px;
+    top: 80px;
+}
+
 .nav-item-in{
-  text-align: left;
+    text-align: left;
     cursor: pointer;
     font-size: 20px;
-    margin-top:15px;
-    padding-top:10px;
-    width:250px;
+    width:245px;
     height:50px;
-    background-color: transparent;
+    padding-left: 15px;
+    padding-top: 10px;
     color:black;
+    border: 1px solid black;
 }
+
+/* div nav end */

@@ -38,7 +38,6 @@
 
     <div class="board_wrap"> <!--전체 div-->
         <div class="board_title">
-            <br><br><br><br><br><br><br>
             <strong>자유게시판</strong>
         </div>
         
@@ -47,12 +46,16 @@
                 <div class="title">
                     <dl>
                         <dt>제목</dt>
-                        <dd><input type="text" placeholder="제목을 입력하세요" value="플로깅 하실분 구해요~~~"></dd>
+                        <dd><input type="text" placeholder="제목을 입력하세요" value="충북대 플로깅 하실분 구해요~~"></dd>
                     </dl>
                     <hr>
                 </div>
                 <div class="cont" style="font-size: 20px;">
-                    <textarea placeholder="내용을 입력하세요">플로깅 같이 하실 분 구해요~~ 충북대 부근에서요!! 
+                    <textarea placeholder="내용을 입력하세요"> 
+                        안녕하세요
+                        충북대 부근에서 플로깅 하실 분 구해요
+                        오늘 6시쯤 좋아요
+                        010-000-000 문자주세요!!
                 </textarea>
                 </div>
             </div>
@@ -64,6 +67,17 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
+        <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
+        <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
+        <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
+        <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
+        <br>
+        <p>이것은 푸터입니다. 위에는 학교홈페이지와 저희 깃허브입니다.(블로그일수도)</p>
+        <p>찾아오시는길: 찾아오지말아주세요.</p>
+        <p>2023 3-1학기 오픈소스웹프로젝트</p>
+      </div>
     <script>
         function movelist(){
             location.href = "list.html";
@@ -74,12 +88,12 @@
         }
 
         $(document).ready(function(){
-      $("#nav").mouseenter(function(){
+        $("#nav").mouseenter(function(){
         $("#nav").height(200);
-        $(".nav-container-in").show();
-        
+        $(".nav-container-in").show(); 
       });
-      $("#nav").mouseleave(function(){
+      
+        $("#nav").mouseleave(function(){
         $(".nav-container-in").hide();
         $("#nav").height(80);
 

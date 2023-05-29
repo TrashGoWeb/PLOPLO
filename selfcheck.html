@@ -79,22 +79,22 @@
        
         <div id="pd1">
         <img src="image_selfcheck/pointds1.jpg" id="img1" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des1">♪ 당신은 Eco 키즈입니다. ♪<br><br>환경이 걱정되지만 뭐부터 시작해야 하는지 모르는 단계로, 단순하고 쉬운 일부터 시도하세요!</p>
+        <h3 id="des1">♪ 당신은 <span class="eco1">Eco 키즈</span>입니다. ♪<br><br>환경이 걱정되지만 뭐부터 시작해야 하는지 모르는 단계로, 단순하고 쉬운 일부터 시도하세요!</p>
     </div>
 
         <div id="pd2">
         <img src="image_selfcheck/pointds2.jpg" id="img2" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des2">♪ 당신은 Eco 청소년입니다. ♪<br><br>환경을 지키는 구체적인 방법을 어느 정도 아는 단계로, 지금처럼 환경을 위한 실천을 조금씩 늘려보세요!</p>
+        <h3 id="des2">♪ 당신은 <span class="eco2">Eco 청소년</span>입니다. ♪<br><br>환경을 지키는 구체적인 방법을 어느 정도 아는 단계로, 지금처럼 환경을 위한 실천을 조금씩 늘려보세요!</p>
         </div>
 
         <div id="pd3"> 
         <img src="image_selfcheck/pointds3.jpg" id="img3" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des3">♪ 당신은 Eco 프렌즈입니다. ♪<br><br>환경에 관심 많고 최대한 실천하는 단계로, 곧 ECO 마스터가 되겠군요!</p>
+        <h3 id="des3">♪ 당신은 <span class="eco3">Eco 프렌즈</span>입니다. ♪<br><br>환경에 관심 많고 최대한 실천하는 단계로, 곧 ECO 마스터가 되겠군요!</p>
     </div>
 
     <div id="pd4">
         <img src="image_selfcheck/pointds4.jpg" id="img4" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des4">♪ 당신은 Eco 마스터입니다. ♪<br><br>이미 환경을 위한 실천에 누구보다 앞선 단계로, 환경과 지구를 위해 애쓰는 모습이 아주 멋져요!</p>
+        <h3 id="des4">♪ 당신은 <span class="eco4">Eco 마스터</span>입니다. ♪<br><br>이미 환경을 위한 실천에 누구보다 앞선 단계로, 환경과 지구를 위해 애쓰는 모습이 아주 멋져요!</p>
     </div>
     
     </div>
@@ -180,18 +180,31 @@
     });
 });     
 
-$(document).ready(function(){
-      $("#nav").mouseenter(function(){
+        $(document).ready(function(){
+        $("#nav").mouseenter(function(){
         $("#nav").height(200);
         $(".nav-container-in").show();
         
-      });
-      $("#nav").mouseleave(function(){
+});
+        $("#nav").mouseleave(function(){
         $(".nav-container-in").hide();
         $("#nav").height(80);
 
-      });
-    });
+ });
+});
     </script>
 
 
+<div class="footer">
+    <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
+    <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
+    <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
+    <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
+    <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
+    <br>
+    <p>이것은 푸터입니다. 위에는 학교홈페이지와 저희 깃허브입니다.(블로그일수도)</p>
+    <p>찾아오시는길: 찾아오지말아주세요.</p>
+    <p>2023 3-1학기 오픈소스웹프로젝트</p>
+  </div>
+</body>
+</html>

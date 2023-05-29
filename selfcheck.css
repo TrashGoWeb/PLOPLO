@@ -9,182 +9,211 @@ body{
     font-family: 'Pretendard-Regular';
 }
 
-       .selfcheck{
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 200px;
-       }       
-       .bigtxt{
-        text-align: center;
-        font-weight: bold;
-    }
+.selfcheck{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 200px;
+}       
+.bigtxt{
+    text-align: center;
+    font-weight: bold;
+}
 
-    .subtxt0{
-        margin-top: 20px;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-        .item{
-            float: left;
-            border-radius: 30px;
-            border-color: 1px solid black;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            font-size: 21px;
-            text-align: center;
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-            
-        }
+.subtxt0{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.item{
+    float: left;
+    border-radius: 30px;
+    border-color: 1px solid black;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;     
+}
 
-        .item:hover{
-            border: 2px solid skyblue;
-        }
+.item:hover{
+    border: 2px solid skyblue;
+}
 
-        .item-container {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: 20px; 
-            position:relative;
-        }
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px; 
+    position:relative;
+}
 
-        #point{
-            background-color: #EDF1D6;
-            width:200px;
-            height:50px;
-            font-size: 20px;
-            text-align: center;
-            border: none;
-        }
+#point{
+    background-color: #EDF1D6;
+    width:200px;
+    height:50px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+}
+.select{
+    margin-left: 60px;      
+}
 
-        .select{
-            margin-left: 60px;
-            
-            
-        }
-
-        .text{
-            margin-left: 60px;
-        }
+.text{
+    margin-left: 60px;
+}
         
-        .ds1{
-            background-color: beige;
-        }
-        .ds2{
-            background-color: #FFC8C8;
-        }
-        .ds3{
-            background-color: #DCEBFF;
-        }
-        .ds4{
-            background-color: #C8C8FF;
-        }
-        .ds5{
-            background-color: #82F9B7;
-        }
+.ds1{
+    background-color: beige;
+}
+.ds2{
+    background-color: #FFC8C8;
+}
+.ds3{
+    background-color: #DCEBFF;
+}
+.ds4{
+    background-color: #C8C8FF;
+}
+.ds5{
+    background-color: #82F9B7;
+}
         
-        .swal-button {
-	        background-color: #FFB2D9;
-	        font-size: 25px;
-        }
-        
-        .pointdescription{
-           margin-bottom: 800px;
-           margin-top: 50px;
-          
-            
-           }
-       .pointdescription h3 {
-        display: none;
-        padding-left: 40px; 
-       padding-right: 40px;
-       
-    }
-    #pd1{
-        float: left;
-        width:25%;
-        box-sizing: border-box;
-    }
-    #pd2{
-        float: left;
-        width:25%;
-        box-sizing: border-box;
-    }
-    #pd3{
-        float: left;
-        width:25%;
-        box-sizing: border-box;
-    }
-    #pd4{
-        float: left;
-        width:25%;
-        box-sizing: border-box;
-    }
-
-
-
-#nav{
-      text-align: center;
-      position: fixed;
-      z-index: 1;
-      top:0;
-      height: 80px;
+.swal-button {
+	background-color: #FFB2D9;
+	font-size: 25px;
+} 
+.pointdescription{
+    margin-bottom: 400px;
+    margin-top: 50px;
+}
+.pointdescription h3 {
+    display: none;
+    padding-left: 40px; 
+    padding-right: 40px;   
+}
+#pd1{
+    float: left;
+    width:25%;
+    box-sizing: border-box;
+}
+#pd2{
+    float: left;
+    width:25%;
+    box-sizing: border-box;
+}
+#pd3{
+    float: left;
+    width:25%;
+    box-sizing: border-box;
+}
+#pd4{
+    float: left;
+    width:25%;
+    box-sizing: border-box;
+}
+.eco1{
+    color:#FF607F;
+    font-weight: bold;
+}
+.eco2{
+    color: #FFAF0A;
+    font-weight: bold;
+}
+.eco3{
+    color:#5EC75E;
+    font-weight: bold;
+}
+.eco4{
+    color:#52E4DC;
+    font-weight: bold;
+}
+.footer{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 150px;
     width: 100%;
     background-color: #EDF1D6;
     color:black;
 }
-  .nav-container{  
-      display: flex;
-      justify-content: left;
-      text-align: left;
-      flex-direction: row;
-      width: 100%;
-      margin: 0;
-      padding: 80;
-      list-style-type: none;
-  }
-  .nav-item{
-      text-align: center;
-      cursor: pointer;
-      font-size: 20px;
-      margin-top:15px;
-      padding-top:10px;
-      width:250px;
-      height:50px;
-  }
-  .nav-home{
+
+
+#nav{
+    text-align: center;
+    z-index: 1;
+    min-height: 80px;
+    height: auto;
+    width: 100%;
+    background-color: lightgrey;
+    border-bottom: solid 1px black;
+    color:black;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 80;
+    list-style-type: none;
+}
+
+.nav-item{
+    text-align: center;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    width:250px;
+    height:50px;
+}
+
+.nav-home{
     cursor: pointer;
     margin-top: 15px;
     width:250px;
-    background-color: #EDF1D6;
-  }
-  .nav-item:hover {
-    border:1px solid black;
-    
-  }
+    background-color: lightgrey;
+}
 
-  #loginbt{
+.nav-item:hover {
+    border: 1px solid black;
+}
+
+#loginbt{
     margin-top: 20px;
-  }
-  .slider{
-    margin:0 auto;
-    width: 60%;
-  }
-  .nav-container-in{
+}
+
+.nav-container-in{
     display: none;
     list-style-type: none;
-      text-align: center;
-      width: 100%;
-  }
-  .nav-item-in{
+    padding-top: 10px;
+    background-color: lightgrey;
+    width: 100%;
+}
+#act2 .nav-container-in {
+    position: absolute;
+    left: 250px;
+    top: 80px;
+}
+
+#act1 .nav-container-in {
+    position: absolute;
+    left: 495px;
+    top: 80px;
+}
+
+.nav-item-in{
     text-align: left;
-      cursor: pointer;
-      font-size: 20px;
-      margin-top:15px;
-      padding-top:10px;
-      width:250px;
-      height:50px;
-      background-color: transparent;
-      color:black;
-  }
+    cursor: pointer;
+    font-size: 20px;
+    width:245px;
+    height:50px;
+    padding-left: 15px;
+    padding-top: 10px;
+    color:black;
+    border: 1px solid black;
+}
+
+/* div nav end */
