@@ -6,6 +6,7 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Trash Go</title>
   <style>
     @font-face {
@@ -22,7 +23,7 @@
     }
 
     #main-content{
-      width: 70%;
+      width: 80%;
       margin:0 auto;
       background-color: white;
     }
@@ -36,7 +37,7 @@
       top:0;
       height: 80px;
       width: 100%;
-      background-color: #EDF1D6;
+      background-color: lightgray;
       color:black;
   }
   .nav-container{
@@ -63,7 +64,7 @@
     cursor: pointer;
     margin-top: 15px;
     width:250px;
-    background-color: #EDF1D6;
+    background-color: lightgray;
   }
   .nav-item:hover {
     border:1px solid black;
@@ -75,7 +76,7 @@
   }
   .slider{
     margin:0 auto;
-    width: 60%;
+    width: 80%;
   }
   .nav-container-in{
     display: none;
@@ -96,11 +97,10 @@
   }
   .footer{
     text-align: left;
-    padding-top: 10px;
-    padding-left: 10px;
-      height: 150px;
+    padding: 30px 30px 30px 30px;
+      height: 300px;
       width: 100%;
-      background-color: #EDF1D6;
+      background-color: lightgray;
       color:black;
   }
   .div1{
@@ -114,33 +114,30 @@
     margin:10px 10px 10px 10px;
   }
   .layer{
-    background-color: rgba(237, 241, 214, 100);
-    border-radius: 10px;
-    padding: 10px 10px 10px 10px;
-    border: solid 50px #ffffff00;
+    background-color: lightgray;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    border: solid 5px white;
   }
   #youtube{
     margin: 0 auto;
   }
-  .card{
-    display: inline;
+  #event{
+  }
+  #event-slider{
+    width:100%;
+    height: 100%;
+  }
+  table{
+    cursor: pointer;
   }
   </style>
-  <script>
-    $(document).ready(function(){
-      $("#nav").mouseenter(function(){
-        $("#nav").height(200);
-        $(".nav-container-in").show();
-        
-      });
-      $("#nav").mouseleave(function(){
-        $(".nav-container-in").hide();
-        $("#nav").height(80);
-
-      });
-    });
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    
     
   </script>
+  <script type = "module" src="./main.js"></script>
 </head>
 <body>
   
@@ -171,13 +168,13 @@
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="image/banner1.png" class="d-block w-100" alt="...">
+                <img src="image/slide1.jpg" class="d-block w-100" alt="..." width="100%" height="700">
               </div>
               <div class="carousel-item">
-                <img src="image/banner2.png" class="d-block w-100" alt="...">
+                <img src="image/slide2.jpeg" class="d-block w-100" alt="..." width="100%" height="700">
               </div>
               <div class="carousel-item">
-                <img src="image/banner3.png" class="d-block w-100" alt="...">
+                <img src="image/slide3.jpg" class="d-block w-100" alt="..." width="100%" height="700"> 
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -195,50 +192,156 @@
       <br>
       <div class="div2">
           <div class="row">
-              <div class="col-sm-5 layer">
-                  <!--유튜브영상-->
+              <div class="col-sm-4 layer">
+                  <!--추천동영상-->
+                  <h2>추천동영상</h2>
                   <iframe id="youtube" width="100%" height="300" src="https://www.youtube.com/embed/5WsOJYkG6cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
-              <div class="col-sm-1">
-                <!--여백-->
-            </div>
-              <div class="col-sm-6 layer">
-                  <!--커뮤니티-->
+              
+              <div class="col-sm-8 layer">
+                  <!--방문자수 그래프-->
+                  <h2>CO2배출량</h2>
+                  <div id="chart_div">
+
+                  </div>
+                  
               </div>
           </div>
       </div>
   
       <div class="div3">
           <div class="row">
-              <div class="col-sm-6 layer">
+              <div class="col-sm-8 layer">
                   <!--공지사항-->
+                  <h2>공지사항</h2>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">작성일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="num"></th>
+                        <td class="list-title">Mark</td>
+                        <td class="writer">Otto</td>
+                        <td class="date">@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="num"></th>
+                        <td class="list-title">Jacob</td>
+                        <td class="writer">Thornton</td>
+                        <td class="date">@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="num"></th>
+                        <td class="list-title">Jacob</td>
+                        <td class="writer">Thornton</td>
+                        <td class="date">@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="num"></th>
+                        <td class="list-title">Jacob</td>
+                        <td class="writer">Thornton</td>
+                        <td class="date">@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="num"></th>
+                        <td class="list-title">Jacob</td>
+                        <td class="writer">Thornton</td>
+                        <td class="date">@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
                   
               </div>
-              <div class="col-sm-6 layer">
-                  <!--추천인-->
-                  <div class="card" style="width: 15rem;">
-                    <img src="image/dotom.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">오늘의 추천인</h5>
-                      <p class="card-text">이분은 접니다.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="col-sm-4 layer" id="event">
+                  <!--이벤트-->
+                  <h2>이벤트</h2>
+                  <div class="slider" id="event-slider">
+                    <div id="carouselExample2" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="image/banner1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="image/banner2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="image/banner3.png" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
                     </div>
                   </div>
-                  <div class="card" style="width: 15rem;">
-                    <img src="image/dotom.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">오늘의 추천인</h5>
-                      <p class="card-text">이분은 접니다.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
+                  
+                  
               </div>
           </div>
       </div>
+      
+      <div class="div4">
+        <h2>이달의 플로거</h2>
+        <div class="row">
+            <div class="col-sm-3 layer">
+                <!--카드-->
+                <div class="card" style="width: 18rem;">
+                  <img src="image/henny.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Henny</h5>
+                    <p class="card-text">The TrashGo Web developer.</p>
+                    <a href="#" class="btn btn-primary">Go github</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-3 layer">
+                <!--카드-->
+                <div class="card" style="width: 18rem;">
+                  <img src="image/dotom.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Dotom</h5>
+                    <p class="card-text">The TrashGo Web developer.</p>
+                    <a href="#" class="btn btn-primary">Go github</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-3 layer">
+              <!--카드-->
+              <div class="card" style="width: 18rem;">
+                <img src="image/ju.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Ju</h5>
+                  <p class="card-text">The TrashGo Web developer.</p>
+                  <a href="#" class="btn btn-primary">Go github</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-3 layer">
+            <!--카드-->
+            <div class="card" style="width: 18rem;">
+              <img src="image/henny.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Ju</h5>
+                <p class="card-text">The TrashGo Web developer.</p>
+                <a href="#" class="btn btn-primary">Go github</a>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
   
       
   </div>
-</div>
 <div class="footer">
   <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
   <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 

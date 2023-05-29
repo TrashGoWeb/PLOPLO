@@ -17,7 +17,7 @@
         }
         body{
             width:100%;
-            height:98%;
+            height:100%;
             background-image: url("image/bg2.jpg");
             background-size: cover;
             font-family: 'Pretendard-Regular';
@@ -68,19 +68,21 @@
         
         #page1{
             width:100%;
-            height: 100%;
+            height: 1000px;
             background-image: url("image/bg2.jpg");
             background-size: cover;
-            position: absolute;
+            background-repeat: no-repeat;
+            background-position: cover;
             margin: 0 auto;
             text-align: center;
         }
         #page2{
             width:100%;
-            height: 100%;
-            background-image: url("image/bg2.jpg");
+            height: 1000px;
+            background-color: white;
             background-size: cover;
-            position: absolute;
+            background-repeat: no-repeat;
+            background-position: cover;
             display: none;
             margin: 0 auto;
             text-align: center;
@@ -91,46 +93,44 @@
 }
 
 .title{
-    background-repeat: no-repeat;
-    background-position: cover;
+    background-color: #dddddd00;
+    display:none;
     width: 100%;
     height: 1000px;
+    margin: 0 auto;
 }
-.title2{
-    background-color: white;
-    width: 100%;
-    height: 1000px;
-}
+
 
 .titletxt1{
     display: block;
-    position: absolute;
     color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50% );
     font-family: 'GmarketSansMedium';
     font-weight: 700;
     font-size: 100px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .titletxt2{
     display: block;
-    position: absolute;
     color: white;
-    top: 65%;
-    left: 50%;
-    transform: translate( -50%, -50% );
     font-family: 'GmarketSansMedium';
     font-weight: 700;
     font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hideme
+{
+    color:black;
+    display:none;
 }
 
 
     </style>
     <script>
         
-        const modal = document.getElementById("modal")
+        
         var trash_cnt = 6;
         var x=10;
         
@@ -143,11 +143,15 @@
             document.getElementById( 'progress' ).setAttribute( 'style', 'width:' + x.toString() +'%' )
 
             if(trash_cnt==0){
-                page2show();
+                titleshow();
             }
         }
-        function page2show(){
-            $("#page2").slideDown(3000);
+        function titleshow(){
+            $(".title").slideDown(3000);
+            $("#page2").show();
+        }
+        function moveMain(){
+            window.location.href = "main.html"; //로그인 성공하면 메인페이지로 이동
         }
         
         $(document).ready(function(){
@@ -159,7 +163,16 @@
           $(".trash").mouseleave(function(){
             $(this).removeClass("highlight");
           });
-          
+          $(window).scroll( function(){
+            $('.hideme').each( function(i){
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if( bottom_of_window > bottom_of_object/2 ){
+                    //$(this).animate({'opacity':'1'},2000);
+                    $(this).slideDown(2000);
+                }
+            }); 
+        });
           
 
         });
@@ -178,20 +191,30 @@
             <img src="image/trash4.png" onclick="trashClicked(this)" class="trash" id="trash4" hegiht="80" width="80">
             <img src="image/trash5.png" onclick="trashClicked(this)" class="trash" id="trash5" hegiht="80" width="80">
             <img src="image/trash6.png" onclick="trashClicked(this)" class="trash" id="trash6" hegiht="50" width="50">
+            
+            <div id="title">
+                <div class="container-fluid text-center title">
+                    <h1 class="titletxt1">안녕하세요!</h1>
+                    <h2 class="titletxt2">아래로 스크롤 해주세요.</h2>
+                </div>
+            </div>
         </div>
-        
-
-
         <div id="page2">
             
-            <div class="container-fluid text-center title">
-                <h1 class="titletxt1">Trash Go !</h1>
-                <h2 class="titletxt2">안녕하세요</h2>
-            </div>
-            <br>
-            <div class="container-fluid text-center title2">
-                <h1 class="titletxt1">Trash Go !</h1>
-                <h2 class="titletxt2">안녕하세요</h2>
+            <div id="container" class="hideme">
+                <h1>.......</h1>
+                <h1>......</h1>
+                <h1>.....</h1>
+                <h1>....</h1>
+                <h1>...</h1>
+                <h1>..</h1>
+                <h1>.</h1>
+                
+                <h1>저희는 Trash Go입니다.</h1>
+                <h2>TrashGo는 좋아하는 풍경을 지키려하는 사람들이 모이는 웹사이트입니다.</h2>
+                <h2>작은 용기를 내어 낸 한걸음이 위대한 여정의 시작입니다.</h2>
+                <h2>사랑하는 경치를 만들어봅시다.</h2>
+                <button onclick="moveMain()">함께하기</button>
             </div>
             
         </div>
