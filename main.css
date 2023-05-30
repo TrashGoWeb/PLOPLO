@@ -1,13 +1,173 @@
-.navbar{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 0px;
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
-.div2{
+
+body{
+    width:98%;
+    background-size: 100% 100%;
+    background-color: white;
+    font-family: 'Pretendard-Regular';
+}
+
+#main-content{
+    width: 80%;
+    margin:0 auto;
+    background-color: white;
+}
+
+#main-content:not(#nav){
+    margin-top: 80px;
+}
+
+#nav{
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    height: 80px;
     width: 100%;
-    height: 1000px;
+    background-color: lightgray;
+    color:black;
+}
+
+.nav-container{
+    
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 80;
+    list-style-type: none;
+}
+
+.nav-item{
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top:15px;
+    padding-top:10px;
+    width:250px;
+    height:50px;
+}
+
+.nav-home{
+    cursor: pointer;
+    margin-top: 15px;
+    width:250px;
+    background-color: lightgray;
+}
+
+.nav-item:hover {
+    border:1px solid black;
+  
+}
+
+.title{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.titlebig{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+#loginbt{
+    margin-top: 20px;
+}
+
+.slider{
+    margin:0 auto;
+    width: 80%;
+}
+
+.nav-container-in{
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-item-in{
+    text-align: left;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top:15px;
+    padding-top:10px;
+    width:250px;
+    height:50px;
+    background-color: transparent;
+    color:black;
+}
+
+.footer{
+    margin-top: 200px;
+    margin-left: 0;
+    text-align: left;
+    height: 200px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: lightgray;
+    color:black;
+}
+
+.div1{
+    padding:10px 10px 10px 10px;
+    margin-top: 70px; 
+}
+
+.div2{
+    padding:10px 10px 10px 10px;
+    margin-top: 70px; 
+}
+
+.div3{
+    margin-top: 30px;
+    margin:10px 10px 10px 10px;
+}
+
+.div4{
+    margin-top: 40px;
+}
+#chart_div{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.layer{
+    text-align: center;
+    background-color: lightgray;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    border: solid 5px white;
+}
+
+#youtube{
+    margin: 0 auto;
+}
+
+#event-slider{
+    width:100%;
+    height: 100%;
+}
+
+table{
+    cursor: pointer;
+}
+
+.titletxt{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card{
+    text-align: center;
+    margin: auto;
 }
