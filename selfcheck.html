@@ -41,7 +41,7 @@
     <div class="container-fluid text-center selfcheck">
         <div class="container-fluid text-center intro">
             <h2 class="bigtxt">Self Check</h2>
-            <p class="subtxt0"><img src="image/selfcheck/checkicon.png" class="icon">자신이 실천해본 친환경 활동을 클릭하고, 하단의 '내 환경 점수 보기' 버튼을 눌러보세요!</p>
+            <p class="subtxt0"><img src="image/selfcheck/checkicon.png" class="icon">자신이 실천해 본 친환경 활동을 클릭하고, 하단의 '내 환경 점수 보기' 버튼을 눌러보세요!</p>
         </div>
 
      <br><br><br><br><br><br>
@@ -67,33 +67,12 @@
         </div>
     </div> <!--item container-->
     <button type="button" class="btn btn-outline-success btn-lg title-btn" id="gotest">내 환경 점수 보기</button>
+    <br><br><br>
+    <div id="result">
+    </div>
     </div> <!--select-->
     
-    <br><br>
-    <hr>
-    <div class="pointdescription">
-       
-        <div id="pd1">
-        <img src="image_selfcheck/pointds1.jpg" id="img1" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des1">♪ 당신은 <span class="eco1">Eco 키즈</span>입니다. ♪<br><br>환경이 걱정되지만 뭐부터 시작해야 하는지 모르는 단계로, 단순하고 쉬운 일부터 시도하세요!</p>
-    </div>
 
-        <div id="pd2">
-        <img src="image_selfcheck/pointds2.jpg" id="img2" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des2">♪ 당신은 <span class="eco2">Eco 청소년</span>입니다. ♪<br><br>환경을 지키는 구체적인 방법을 어느 정도 아는 단계로, 지금처럼 환경을 위한 실천을 조금씩 늘려보세요!</p>
-        </div>
-
-        <div id="pd3"> 
-        <img src="image_selfcheck/pointds3.jpg" id="img3" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des3">♪ 당신은 <span class="eco3">Eco 프렌즈</span>입니다. ♪<br><br>환경에 관심 많고 최대한 실천하는 단계로, 곧 ECO 마스터가 되겠군요!</p>
-    </div>
-
-    <div id="pd4">
-        <img src="image_selfcheck/pointds4.jpg" id="img4" width="170px" height="80px" style="border-radius: 30px;"><br><br>
-        <h3 id="des4">♪ 당신은 <span class="eco4">Eco 마스터</span>입니다. ♪<br><br>이미 환경을 위한 실천에 누구보다 앞선 단계로, 환경과 지구를 위해 애쓰는 모습이 아주 멋져요!</p>
-    </div>
-    
-    </div>
 
 </div><!--self check 닫음-->
 
@@ -105,92 +84,100 @@
     <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
     
     <p>2023년 3-1 오픈소스 웹소프트웨어<br>
-    (28644)충청북도 청주시 서원구 충대로 1<br>
-    (이용 문의)TrashGo@.chungbuk.ac.kr<br>
-    E-mail :TrashGo@.chungbuk.ac.kr<br>
-    <p>Copyright © TrashGo. All Rights Reserved.</p>
+        (28644)충청북도 청주시 서원구 충대로 1<br>
+        (이용 문의) PLOPLO@chungbuk.ac.kr<br>
+        E-mail : PLOPLO@chungbuk.ac.kr<br>
+        <p>Copyright © PLOPLO. All Rights Reserved.</p>
     
   </div>
 
     <script>
         var state_img = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        var item_name = ["", "개인텀블러나 물병을 사용한다", "병의 라벨과 뚜껑은 따로 버린다", "구매 전 친환경 마크를 확인한다", "재활용품은 세척해서 버린다", 
-        "박스의 테이프를 떼서 버린다.", "장을 볼 때 장바구니를 항상 챙긴다", "환경 관련 매체를 구독한다.", "양치컵을 사용하고, 물을 절약한다.",
+        var item_name = ["", "개인텀블러나 물병을 사용한다.", "병의 라벨과 뚜껑은 따로 버린다.", "구매 전 친환경 마크를 확인한다.", "재활용품은 세척해서 버린다.", 
+        "박스의 테이프를 떼서 버린다.", "장을 볼 때 장바구니를 항상 챙긴다.", "환경 관련 매체를 구독한다.", "양치컵을 사용하고, 물을 절약한다.",
          "에너지 절약형 전구를 사용한다.", "사용하지 않는 전기는 뽑는다.", "친환경 섬유 유연제를 사용한다.", "가까운 거리는 걷거나 자전거를 탄다.", 
-         "주문 시 1회용품 이용을 거절한다.", "업사이클링 제품을 사용한다.", "자연 분해되는 물건을 사용한다."]
+         "필요없는 1회용품 이용을 거절한다.", "업사이클링 제품을 사용한다.", "자연 분해되는 물건을 사용한다."]
         var total_price=0;
+        var buylist = ""; // 선택한 활동을 저장할 변수
+
         function itemclick(who, n, price){
 
             if(state_img[n]==0) {
                 who.getElementsByTagName('img')[0].src = "image/logo2.png";
                 total_price += price;
                 state_img[n] = 1;
+                buylist += item_name[n] + " ";
             }else {
                 who.getElementsByTagName('img')[0].src = "image/selfcheck/" + n.toString() + ".png"
                 total_price -= price;
                 state_img[n] = 0;
+                var activityRegex = new RegExp(item_name[n] + "\\s?");
+                buylist = buylist.replace(activityRegex, ""); 
             }
         }
-        function buy(){
-            var buylist = "";
-            if(total_price==0) {
-                swal("0점입니다! 심각하군요.");
-            }else {
-                for(i=1; i<17; i++) {
-                    if(state_img[i]==1) {
-                        buylist += item_name[i] + " " + "\n";
-                    }
-                }
-                swal(buylist.slice(0,-1) + "\n" + "\n"+ "점수 : " +total_price.toString() +"점");
-                                   
+
+        function showScore() {
+            var score = total_price; // 점수 계산 값 (total_price 변수)
+            var scoreImage = ""; // 점수에 따른 이미지 파일명
+
+            if (score >= 1 && score <= 4) {
+                scoreImage = "image/selfcheck/pointds1.png";
             }
-            
-        }
-        
-        $(document).ready(function(){
-        $("#img1").dblclick(function(){
-        $("#des1").slideDown("slow");
-  });
-});
-        $(document).ready(function(){
-        $("#img1").mouseenter(function(){
-        $("#des1").slideUp("slow");
-    });
-});       
-       
-        $(document).ready(function(){
-        $("#img2").dblclick(function(){
-        $("#des2").slideDown("slow");
-  });
-});
-        $(document).ready(function(){
-        $("#img2").mouseenter(function(){
-        $("#des2").slideUp("slow");
-    });
-});     
+            if (score >= 5 && score <= 8) {
+                scoreImage = "image/selfcheck/pointds2.png";
+            }
+            if (score >= 9 && score <= 12) {
+                scoreImage = "image/selfcheck/pointds3.png";
+            }
+            if (score >= 13 && score <= 15) {
+                scoreImage = "image/selfcheck/pointds4.png";
+            }
 
-        $(document).ready(function(){
-        $("#img3").dblclick(function(){
-        $("#des3").slideDown("slow");
-  });
-});
-        $(document).ready(function(){
-        $("#img3").mouseenter(function(){
-        $("#des3").slideUp("slow");
-    });
-});     
+            // 결과를 표시할 요소
+             var resultElement = document.getElementById("result");
 
-        $(document).ready(function(){
-        $("#img4").dblclick(function(){
-        $("#des4").slideDown("slow");
-  });
-});
-        $(document).ready(function(){
-        $("#img4").mouseenter(function(){
-        $("#des4").slideUp("slow");
-    });
-});     
+            // 결과 요소를 초기화
+            resultElement.innerHTML = "";
 
+            // 선택된 것이 없을때
+            if (scoreImage === "") {
+                var messageElement = document.createElement("p");
+                messageElement.textContent = "선택된 것이 없습니다" ;
+                messageElement.style.color="red";
+                messageElement.style.fontSize="30px";
+                resultElement.appendChild(messageElement);
+                return;
+    }
+
+            // 이미지를 표시할 요소를 가져와서 이미지를 설정
+            var imageElement = document.createElement("img");
+            imageElement.src = scoreImage;
+            imageElement.alt = "Score Image";
+            imageElement.style.width = "500px";
+            imageElement.style.height = "500px";
+
+            // 점수를 출력하는 요소를 가져와서 점수를 설정.
+            var scoreElement = document.createElement("p");
+            scoreElement.textContent = "나의 점수 : " + score + "점";
+            scoreElement.style.fontSize="30px";
+
+            // 선택된 내용을 표시하는 요소를 가져와서 선택된 내용을 설정합니다.
+            var selectedElement = document.createElement("p");
+            selectedElement.textContent = "참여한 활동 : " + "" + buylist + "\n"; // 선택된 내용을 buylist에 저장해야 합니다.
+            selectedElement.style.color="blue";
+            selectedElement.style.fontSize="15px";
+
+            // 결과 요소에 이미지, 점수, 선택된 내용을 추가   
+            resultElement.appendChild(scoreElement);
+            resultElement.appendChild(selectedElement);
+            resultElement.appendChild(imageElement);
+}
+
+            // 버튼 클릭 시 showScore() 함수 호출
+            document.getElementById("gotest").addEventListener("click", showScore);
+
+
+        /*nav*/   
         $(document).ready(function(){
         $("#nav").mouseenter(function(){
         $("#nav").height(200);

@@ -103,7 +103,7 @@ a {
 .board_list {
     width: 100%;
     border-top: 2px solid #000;
-    background-color:#FAEBD7;
+    background-color:#FFFFE8;
     
 }
 
@@ -325,7 +325,7 @@ a {
     padding-left: 10px;
     height: 150px;
     width: 100%;
-    background-color: #EDF1D6;
+    background-color: #FFD4D4;
     color:black;
    
 }
@@ -338,7 +338,7 @@ a {
     top:0;
     height: 80px;
     width: 100%;
-    background-color: #EDF1D6;
+    background-color:#FFD4D4;
     color:black;
 }
 .nav-container{
@@ -364,7 +364,7 @@ a {
     cursor: pointer;
     margin-top: 15px;
     width:250px;
-    background-color: #EDF1D6;
+    background-color: #FFD4D4;
 }
 .nav-item:hover {
     border:1px solid black;

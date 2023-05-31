@@ -58,73 +58,9 @@ body{
     border: 1px solid green;
 }
 
-#point{
-    background-color: #EDF1D6;
-    width:200px;
-    height:50px;
+#result{
+    margin-bottom: 25px;
     font-size: 20px;
-    text-align: center;
-    border: none;
-}
-
-.text{
-    margin-left: 60px;
-}
-        
-.ds{
-    font-weight: bold;
-    font-size: medium;
-    padding-top: 20px;
-}
-        
-.swal-button {
-	background-color: #d4e5b1;
-	font-size: 25px;
-} 
-.pointdescription{
-    margin-bottom: 400px;
-    margin-top: 50px;
-}
-.pointdescription h3 {
-    display: none;
-    padding-left: 40px; 
-    padding-right: 40px;   
-}
-#pd1{
-    float: left;
-    width:25%;
-    box-sizing: border-box;
-}
-#pd2{
-    float: left;
-    width:25%;
-    box-sizing: border-box;
-}
-#pd3{
-    float: left;
-    width:25%;
-    box-sizing: border-box;
-}
-#pd4{
-    float: left;
-    width:25%;
-    box-sizing: border-box;
-}
-.eco1{
-    color:#FF607F;
-    font-weight: bold;
-}
-.eco2{
-    color: #FFAF0A;
-    font-weight: bold;
-}
-.eco3{
-    color:#5EC75E;
-    font-weight: bold;
-}
-.eco4{
-    color:#52E4DC;
-    font-weight: bold;
 }
 .footer{
     text-align: left;
