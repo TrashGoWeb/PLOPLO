@@ -6,11 +6,12 @@
 }
 
 body{
-    font-family: 'Pretendard-Regular';
+    font-family: 'Pretendard-Regular' !important;
 }
 
 .bigtxt{
     font-weight: bold;
+    font-size: xx-large;
 }
 
 /* div title start */
@@ -28,7 +29,7 @@ body{
     top:0;
     height: 80px;
     width: 100%;
-    background-color: lightgrey;
+    background-color: #FFD4D4;
     color:black;
 }
 
@@ -57,7 +58,7 @@ body{
     cursor: pointer;
     margin-top: 15px;
     width:250px;
-    background-color: lightgrey;
+    background-color: #FFD4D4;
 }
 
 .nav-item:hover {
@@ -100,6 +101,11 @@ body{
     text-align: center;
     margin-top: 200px;
 }
+
+.subtxt0{
+    margin-top: 20px;
+    font-size: medium;
+}
 /* div content end */
 
 /* div search start*/
@@ -112,11 +118,15 @@ body{
 .searchbox{
     width: 200px;
     height: 30px;
+    font-size: small;
+    cursor: pointer;
 }
 
 .searchbtn{
     width: 50px;
     height: 35px;
+    font-size: small;
+    cursor: pointer;
 }
 /* div search end */
 
@@ -138,11 +148,12 @@ body{
 .bigtxt0{
     margin-top: 50px;
     font-weight: bold;
+    font-size: xx-large;
 }
 
 #top-container .subcourseone {
     margin: 0;
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 #top-container {
@@ -169,6 +180,7 @@ body{
     height: 500px;
     border: solid 1px grey;
     border-radius: 5%;
+    cursor: pointer;
 }
 
 .courseimg{
@@ -179,6 +191,7 @@ body{
 .subcourse-title{
     height: 40px;
     text-align: left;
+    margin-top: 20px;
     margin-left: 20px;
     font-size: x-large;
     font-weight: bold;
@@ -192,6 +205,7 @@ body{
 .subcourse-contentfront{
     text-align: left;
     margin-left: 20px;
+    font-size: medium;
 }
 
 
@@ -207,6 +221,7 @@ body{
 .pincourse{
     text-align: left;
     margin-left: 20px;
+    font-size: small;
 }
 
 .pinicon{
@@ -229,6 +244,7 @@ body{
     margin-top: 5px;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .num{
@@ -250,7 +266,6 @@ body{
 
 #text{
    display: hidden;
-   margin-top: 500px;
 }
 
 /* div course end */
@@ -281,13 +296,12 @@ body{
 
 /* div footer start */
 .footer{
-    bottom: 0;
     text-align: left;
     padding-top: 10px;
     padding-left: 10px;
     height: 150px;
     width: 100%;
-    background-color: lightgrey;
+    background-color: #FFD4D4;
     color:black;
 }
 /* div footer end */
