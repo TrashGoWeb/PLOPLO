@@ -48,6 +48,23 @@ const dateList = document.querySelectorAll(".date");
         $("#nav").height(80);
 
       });
+      $(function plo() {
+          $("#run").animate({"left":"20%"}, 2000, function a(){
+            $("#ani1").hide();
+          });
+          $("#run").animate({"left":"60%"}, 2000, function b(){
+            $("#ani2").hide();
+          });
+          $("#run").animate({"left":"90%"}, 2000, null);
+
+          $("#run").animate({"left":"0%"}, 2000, function c(){
+            $("#ani1").show();
+            $("#ani2").show();
+          });
+
+          
+          plo();
+      });
     });
     
     

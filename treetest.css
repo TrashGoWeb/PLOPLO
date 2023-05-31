@@ -130,7 +130,24 @@ body{
 .question{
     text-align: center;
 }
-
+#q1{
+    display: none;
+}
+#q2{
+    display: none;
+}
+#q3{
+    display: none;
+}
+#q4{
+    display: none;
+}
+#q5{
+    display: none;
+}
+#q6{
+    display: none;
+}
 /* div question-subdiv start */
 .question-subdiv{
     margin-bottom: 80px;
@@ -181,14 +198,27 @@ body{
 
 /* div result start */
 .result{
-    /*display: none; 이거는 민정 구조 확인 하는 용도로 쓰고 js 작업 시작하면 none으로 해놓고 js 통해서 result-btn 누르면 위에 question div가 없어지고 result 중 하나 보이게끔*/
+    display: none; /*이거는 민정 구조 확인 하는 용도로 쓰고 js 작업 시작하면 none으로 해놓고 js 통해서 result-btn 누르면 위에 question div가 없어지고 result 중 하나 보이게끔*/
     text-align: center;
     margin: auto;
     margin-top: 70px;
 }
 
+
 .result-subdiv{
     /*display: none; 이거는 민정 구조 확인 하는 용도로 쓰고 js 작업 시작하면 none으로 해놓고 js 통해서 result-subdiv 중 value 값 통해서 아무거나 보이게끔*/
+}
+.result-spring{
+    display: none;
+}
+.result-summer{
+    display: none;
+}
+.result-fall{
+    display: none;
+}
+.result-winter{
+    display: none;
 }
 
 .result-title{

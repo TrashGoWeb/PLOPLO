@@ -42,108 +42,108 @@
             <h1 class="title-txt">플로깅 나무 테스트</h1>
             <p class="title-subtxt">나의 플로깅 스타일과 맞는 나무는 무엇일까?</p>
             <img src="image/treetitle/treetesttitleimg.png" class="title-img"><br>
-            <button type="button" class="btn btn-outline-success btn-lg title-btn">테스트 하러 가기</button>
+            <button type="button" class="btn btn-outline-success btn-lg title-btn" id="gotest">테스트 하러 가기</button>
             <!--btn 누르면 테스트 질문이 적힌 qusetion-subdiv들이 뜨게끔 js 필요
             버튼 누르면 일단 처음에는 질문 1 div만 뜨게 하고 질문 1에 대한 선택지를 고르면 질문 2에 대한 div가 뜨게끔.
-            이렇게 순차적으로 되도록 부탁합니당-->
+            이렇게 순차적으로 되도록 부탁합니당--><!--ok와캇타.-->
         </div> <!--div title end-->
 
         <!--div question start-->
         <div class="question">
-            <div class="question-subdiv">
-                <div class="question-q"> <!--question-q class는 질문 class-->
+            <div class="question-subdiv" id="q1">
+                <div class="question-q" > <!--question-q class는 질문 class-->
                     <p class="question-q-txt">질문 1.</p>
                     <img src="image/treetitle/question1.png" class="question-img">
                     <p class="question-q-txt">해변에서 즐거운 시간을 보내고 있는 당신, 해안가의 많은 쓰레기를 보고 드는 생각은?</p>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">1) “이런 플라스틱 쓰레기는 해양 생물에게 위험이 되므로 정리해야겠다.”</button>
+                <div class="question-a a1">
+                    <button class="question-a-txt summer">1) “이런 플라스틱 쓰레기는 해양 생물에게 위험이 되므로 정리해야겠다.”</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">2) “다른 사람들에게 환경 보호의 중요성을 알리는 캠페인을 해야겠다.”</button>
+                <div class="question-a a1" id="q1-2">
+                    <button class="question-a-txt spring">2) “다른 사람들에게 환경 보호의 중요성을 알리는 캠페인을 해야겠다.”</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">3) “이게 뭐야? 누가 이렇게 쓰레기를 버리는 거야?”</button>
+                <div class="question-a a1" id="q1-3">
+                    <button class="question-a-txt winter">3) “이게 뭐야? 누가 이렇게 쓰레기를 버리는 거야?”</button>
                 </div>
             </div>
-            <div class="question-subdiv">
-                <div class="question-q"> <!--question-q class는 질문 class-->
+            <div class="question-subdiv" id="q2">
+                <div class="question-q" > <!--question-q class는 질문 class-->
                     <p class="question-q-txt">질문 2.</p>
                     <img src="image/treetitle/question2.png" class="question-img">
                     <p class="question-q-txt">안과 밖에서 즐기는 친환경 생활 중, 당신의 선택은?</p>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">1) 활동적인게 최고지! 공원에서 플로깅하기</button>
+                <div class="question-a a2">
+                    <button class="question-a-txt spring">1) 활동적인게 최고지! 공원에서 플로깅하기</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">2) 조용한 실내가 최고! 실내에서 새활용제품 만들기</button>
+                <div class="question-a a2">
+                    <button class="question-a-txt winter fall">2) 조용한 실내가 최고! 실내에서 새활용제품 만들기</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">3) 친환경을 아직은 모르겠어. 천천히 조사해보기</button>
+                <div class="question-a a2">
+                    <button class="question-a-txt fall">3) 친환경을 아직은 모르겠어. 천천히 조사해보기</button>
                 </div>
             </div>
-            <div class="question-subdiv">
-                <div class="question-q"> <!--question-q class는 질문 class-->
+            <div class="question-subdiv" id="q3">
+                <div class="question-q" > <!--question-q class는 질문 class-->
                     <p class="question-q-txt">질문 3.</p>
                     <img src="image/treetitle/question3.png" class="question-img">
                     <p class="question-q-txt">일상생활 속에서 쉽게 할 수 있는 환경보호활동 중 지구를 위해 한 가지만 선택해야한다면, 당신의 선택은?</p>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">1) 텀블러 사용하기</button>
+                <div class="question-a a3">
+                    <button class="question-a-txt summer">1) 텀블러 사용하기</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">2) 에코백 사용하기</button>
+                <div class="question-a a3">
+                    <button class="question-a-txt spring">2) 에코백 사용하기</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">3) 분리수거하기</button>
+                <div class="question-a a3">
+                    <button class="question-a-txt winter">3) 분리수거하기</button>
                 </div>
             </div>
-            <div class="question-subdiv">
-                <div class="question-q"> <!--question-q class는 질문 class-->
+            <div class="question-subdiv" id="q4">
+                <div class="question-q" > <!--question-q class는 질문 class-->
                     <p class="question-q-txt">질문 4.</p>
                     <img src="image/treetitle/question4.png" class="question-img">
                     <p class="question-q-txt">당신이 가고 싶은 플로깅 장소는?</p>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">1) 물길을 따라 산책로가 잘 정비된 도심 코스, “서울 한강”</button>
+                <div class="question-a a4">
+                    <button class="question-a-txt spring">1) 물길을 따라 산책로가 잘 정비된 도심 코스, “서울 한강”</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">2) 비탈길 오르며 운동효과를 높일 수 있는 산 코스, “경기 남한산성”</button>
+                <div class="question-a a4">
+                    <button class="question-a-txt fall winter">2) 비탈길 오르며 운동효과를 높일 수 있는 산 코스, “경기 남한산성”</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">3) 파도소리를 들으며 바다구경까지 할 수 있는 바다 코스, “부산 해운대”</button>
+                <div class="question-a a4">
+                    <button class="question-a-txt summer">3) 파도소리를 들으며 바다구경까지 할 수 있는 바다 코스, “부산 해운대”</button>
                 </div>
             </div>
-            <div class="question-subdiv">
-                <div class="question-q"> <!--question-q class는 질문 class-->
+            <div class="question-subdiv" id="q5">
+                <div class="question-q" > <!--question-q class는 질문 class-->
                     <p class="question-q-txt">질문 5.</p>
                     <img src="image/treetitle/question5.png" class="question-img">
                     <p class="question-q-txt">누군가 나에게 '플로깅의 제일 큰 장점이 뭐야?' 라고 물어본다면, 당신의 대답은?</p>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">1) 플로깅 하면 유산소 운동도 되고 근력도 기를 수 있어!</button>
+                <div class="question-a a5">
+                    <button class="question-a-txt summer">1) 플로깅 하면 유산소 운동도 되고 근력도 기를 수 있어!</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">2) 다른 사람들과 함께 수행하면서 사회적 상호작용이 촉진되고 사회성을 기를 수 있어!</button>
+                <div class="question-a a5">
+                    <button class="question-a-txt spring">2) 다른 사람들과 함께 수행하면서 사회적 상호작용이 촉진되고 사회성을 기를 수 있어!</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">3) 쓰레기를 수거하는 처리과정이 줄어드니까 지역 경제에 경제적 이익을 증가시킬 수 있어!</button>
+                <div class="question-a a5">
+                    <button class="question-a-txt fall">3) 쓰레기를 수거하는 처리과정이 줄어드니까 지역 경제에 경제적 이익을 증가시킬 수 있어!</button>
                 </div>
             </div>
-            <div class="question-subdiv">
+            <div class="question-subdiv" id="q6">
                 <div class="question-q"> <!--question-q class는 질문 class-->
                     <p class="question-q-txt">질문 6.</p>
                     <img src="image/treetitle/question6.png" class="question-img">
                     <p class="question-q-txt">6. 플로깅을 '어떤 계절에 하고싶어요?' 라는 물음에 대한 당신의 대답은?</p>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">1) 날은 덥지만, 뿌듯함도 2배! 아이스크림 먹으며 플로깅 하는 여름!</button>
+                <div class="question-a a6">
+                    <button class="question-a-txt summer">1) 날은 덥지만, 뿌듯함도 2배! 아이스크림 먹으며 플로깅 하는 여름!</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">2) 선선한 바람이 불고, 단풍구경 하며 플로깅 하는 가을!</button>
+                <div class="question-a a6">
+                    <button class="question-a-txt fall">2) 선선한 바람이 불고, 단풍구경 하며 플로깅 하는 가을!</button>
                 </div>
-                <div class="question-a">
-                    <button class="question-a-txt">3) 춥지만, 눈구경도 하고 눈사람도 만들며 플로깅 하는 겨울!</button>
+                <div class="question-a a6">
+                    <button class="question-a-txt winter">3) 춥지만, 눈구경도 하고 눈사람도 만들며 플로깅 하는 겨울!</button>
                 </div>
             </div>
         </div>
@@ -153,7 +153,7 @@
 
         <!--div result start 나무 결과 띄우는 div-->
         <div class="result">
-            <div class="result-subdiv">
+            <div class="result-subdiv result-spring">
                 <h1 class="title-txt">테스트 결과</h1>
                 <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">봄의 벚꽃나무</b>입니다.</h3>
                 <img src="image/treetitle/result1.png" class="result-img">
@@ -164,7 +164,7 @@
                     봄처럼 따뜻한 당신, 마음씨 착한 당신의 인품을 살려 플로깅을 알려주세요!</p>
                 </div>
             </div>
-            <div class="result-subdiv">
+            <div class="result-subdiv result-summer">
                 <h1 class="title-txt">테스트 결과</h1>
                 <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">여름의 수국나무</b>입니다.</h3>
                 <img src="image/treetitle/result2.png" class="result-img">
@@ -175,7 +175,7 @@
                         여름처럼 열정적인 당신, 많은 사람들과 함께 플로깅 하기 위해 플로깅을 알려주세요!</p>
                 </div>
             </div>
-            <div class="result-subdiv">
+            <div class="result-subdiv result-fall">
                 <h1 class="title-txt">테스트 결과</h1>
                 <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">가을의 은행나무</b>입니다.</h3>
                 <img src="image/treetitle/result3.png" class="result-img">
@@ -186,7 +186,7 @@
                         가을처럼 감성적인 당신, 더욱 깨끗한 지구를 만들기 위해 플로깅을 알려주세요!</p>
                 </div>
             </div>
-            <div class="result-subdiv">
+            <div class="result-subdiv result-winter">
                 <h1 class="title-txt">테스트 결과</h1>
                 <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">겨울의 겨울나무</b>입니다.</h3>
                 <img src="image/treetitle/result4.png" class="result-img">
@@ -220,8 +220,9 @@
     </div>
 
     <script>
-        /*nav js*/
+        var spring=0, summer=0, fall=0, winter=0;
         $(document).ready(function(){
+            /*nav js*/
             $("#nav").mouseenter(function(){
                 $("#nav").height(200);
                 $(".nav-container-in").show();
@@ -230,6 +231,53 @@
                 $(".nav-container-in").hide();
                 $("#nav").height(80);
 
+            });
+            /*test js*/
+            $("#gotest").click(function(){
+                $("#q1").slideDown();
+            });
+            
+            $(".a1").click(function(){
+                $("#q2").slideDown();
+            });
+            $(".a2").click(function(){
+                $("#q3").slideDown();
+            });
+            $(".a3").click(function(){
+                $("#q4").slideDown();
+            });
+            $(".a4").click(function(){
+                $("#q5").slideDown();
+            });
+            $(".a5").click(function(){
+                $("#q6").slideDown();
+            });
+            $(".a6").click(function(){
+                $(".result").show();
+                var r = Math.max(spring, summer, fall, winter);
+                if(r==spring){
+                    $(".result-spring").show();
+                }else if(r==summer){
+                    $(".result-summer").show();
+                }else if(r==fall){
+                    $(".result-fall").show();
+                }else if(r==winter){
+                    $(".result-winter").show();
+                }
+                
+            });
+
+            $(".spring").click(function(){
+                spring++;
+            });
+            $(".summer").click(function(){
+                summer++;
+            });
+            $(".fall").click(function(){
+                fall++;
+            });
+            $(".winter").click(function(){
+                winter++;
             });
         });
 
