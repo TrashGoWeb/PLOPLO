@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="treetest.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+    <title>Tree Test</title>
+</head>
+
+<body>
+    <!--div nav-->
+    <div id="nav">
+        <ul class="nav-container">
+            <li class="nav-home"><img src="image/logo2.png" onClick="location.href='main.html'" width="250" height="50"></li>
+            <li class="nav-item" id="act2">ACTIVITY<ul class="nav-container-in">
+              <li class="nav-item-in">SELF CHECK</li>
+              <li class="nav-item-in">PLOGGING COURSE</li>
+        </ul></li>
+            <li class="nav-item" id="act1">COMUNITY<ul class="nav-container-in">
+              <li class="nav-item-in">공지사항</li>
+              <li class="nav-item-in">게시판</li>
+        </ul></li>
+            <li class="nav-item">ABOUT US</li>
+            <li><button type="button" style="margin-left:600px;" id="loginbt" class="btn btn-outline-primary" onClick="location.href='login.html'">LOGIN</button></li>
+        </ul>
+    </div>
+    
+    <!--div content width 80% 영역-->
+    <div class="content">
+
+        <!--div title start-->
+        <div class="title"> 
+            <h1 class="title-txt">플로깅 나무 테스트</h1>
+            <p class="title-subtxt">나의 플로깅 스타일과 맞는 나무는 무엇일까?</p>
+            <img src="image/treetitle/treetesttitleimg.png" class="title-img"><br>
+            <button type="button" class="btn btn-outline-success btn-lg title-btn">테스트 하러 가기</button>
+            <!--btn 누르면 테스트 질문이 적힌 qusetion-subdiv들이 뜨게끔 js 필요
+            버튼 누르면 일단 처음에는 질문 1 div만 뜨게 하고 질문 1에 대한 선택지를 고르면 질문 2에 대한 div가 뜨게끔.
+            이렇게 순차적으로 되도록 부탁합니당-->
+        </div> <!--div title end-->
+
+        <!--div question start-->
+        <div class="question">
+            <div class="question-subdiv">
+                <div class="question-q"> <!--question-q class는 질문 class-->
+                    <p class="question-q-txt">질문 1.</p>
+                    <img src="image/treetitle/question1.png" class="question-img">
+                    <p class="question-q-txt">해변에서 즐거운 시간을 보내고 있는 당신, 해안가의 많은 쓰레기를 보고 드는 생각은?</p>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">1) “이런 플라스틱 쓰레기는 해양 생물에게 위험이 되므로 정리해야겠다.”</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">2) “다른 사람들에게 환경 보호의 중요성을 알리는 캠페인을 해야겠다.”</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">3) “이게 뭐야? 누가 이렇게 쓰레기를 버리는 거야?”</button>
+                </div>
+            </div>
+            <div class="question-subdiv">
+                <div class="question-q"> <!--question-q class는 질문 class-->
+                    <p class="question-q-txt">질문 2.</p>
+                    <img src="image/treetitle/question2.png" class="question-img">
+                    <p class="question-q-txt">안과 밖에서 즐기는 친환경 생활 중, 당신의 선택은?</p>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">1) 활동적인게 최고지! 공원에서 플로깅하기</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">2) 조용한 실내가 최고! 실내에서 새활용제품 만들기</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">3) 친환경을 아직은 모르겠어. 천천히 조사해보기</button>
+                </div>
+            </div>
+            <div class="question-subdiv">
+                <div class="question-q"> <!--question-q class는 질문 class-->
+                    <p class="question-q-txt">질문 3.</p>
+                    <img src="image/treetitle/question3.png" class="question-img">
+                    <p class="question-q-txt">일상생활 속에서 쉽게 할 수 있는 환경보호활동 중 지구를 위해 한 가지만 선택해야한다면, 당신의 선택은?</p>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">1) 텀블러 사용하기</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">2) 에코백 사용하기</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">3) 분리수거하기</button>
+                </div>
+            </div>
+            <div class="question-subdiv">
+                <div class="question-q"> <!--question-q class는 질문 class-->
+                    <p class="question-q-txt">질문 4.</p>
+                    <img src="image/treetitle/question4.png" class="question-img">
+                    <p class="question-q-txt">당신이 가고 싶은 플로깅 장소는?</p>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">1) 물길을 따라 산책로가 잘 정비된 도심 코스, “서울 한강”</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">2) 비탈길 오르며 운동효과를 높일 수 있는 산 코스, “경기 남한산성”</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">3) 파도소리를 들으며 바다구경까지 할 수 있는 바다 코스, “부산 해운대”</button>
+                </div>
+            </div>
+            <div class="question-subdiv">
+                <div class="question-q"> <!--question-q class는 질문 class-->
+                    <p class="question-q-txt">질문 5.</p>
+                    <img src="image/treetitle/question5.png" class="question-img">
+                    <p class="question-q-txt">누군가 나에게 '플로깅의 제일 큰 장점이 뭐야?' 라고 물어본다면, 당신의 대답은?</p>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">1) 플로깅 하면 유산소 운동도 되고 근력도 기를 수 있어!</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">2) 다른 사람들과 함께 수행하면서 사회적 상호작용이 촉진되고 사회성을 기를 수 있어!</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">3) 쓰레기를 수거하는 처리과정이 줄어드니까 지역 경제에 경제적 이익을 증가시킬 수 있어!</button>
+                </div>
+            </div>
+            <div class="question-subdiv">
+                <div class="question-q"> <!--question-q class는 질문 class-->
+                    <p class="question-q-txt">질문 6.</p>
+                    <img src="image/treetitle/question6.png" class="question-img">
+                    <p class="question-q-txt">6. 플로깅을 '어떤 계절에 하고싶어요?' 라는 물음에 대한 당신의 대답은?</p>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">1) 날은 덥지만, 뿌듯함도 2배! 아이스크림 먹으며 플로깅 하는 여름!</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">2) 선선한 바람이 불고, 단풍구경 하며 플로깅 하는 가을!</button>
+                </div>
+                <div class="question-a">
+                    <button class="question-a-txt">3) 춥지만, 눈구경도 하고 눈사람도 만들며 플로깅 하는 겨울!</button>
+                </div>
+            </div>
+        </div>
+        <!--div question end-->
+
+        <button type="button" class="btn btn-outline-success btn-lg title-btn result-btn">테스트 결과 확인하기</button>
+
+        <!--div result start 나무 결과 띄우는 div-->
+        <div class="result">
+            <div class="result-subdiv">
+                <h1 class="title-txt">테스트 결과</h1>
+                <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">봄의 벚꽃나무</b>입니다.</h3>
+                <img src="image/treetitle/result1.png" class="result-img">
+                <div class="result-des result-des1">
+                    <p><b class="result-tree">당신의 플로깅 나무는 "벚꽃나무"입니다.</b><br><br>
+                    벚꽃나무와 닮은 당신! 당신은 지구를 엄청나게 사랑하는 따뜻한 플로거군요. 봄처럼 화사한 날씨에 기분이 좋아져 플로깅을 떠나는 것을 좋아합니다.
+                    또한 당신은 감성적인 기질이 있어 예쁜 절경을 찾아 플로깅을 떠나고 싶어합니다.
+                    봄처럼 따뜻한 당신, 마음씨 착한 당신의 인품을 살려 플로깅을 알려주세요!</p>
+                </div>
+            </div>
+            <div class="result-subdiv">
+                <h1 class="title-txt">테스트 결과</h1>
+                <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">여름의 수국나무</b>입니다.</h3>
+                <img src="image/treetitle/result2.png" class="result-img">
+                <div class="result-des result-des2">
+                    <p><b class="result-tree">당신의 플로깅 나무는 "수국나무"입니다.</b><br><br>
+                        수국나무와 닮은 당신! 당신은 불같이 지구를 사랑하는 열정을 가진 플로거군요. 여름처럼 뜨거운 날씨에 뿌듯함을 찾아 플로깅을 떠나는 것을 좋아합니다.
+                        또한 당신은 활동가 기질이 있어 여러명의 사람과 함께 플로깅을 떠나고 싶어합니다.
+                        여름처럼 열정적인 당신, 많은 사람들과 함께 플로깅 하기 위해 플로깅을 알려주세요!</p>
+                </div>
+            </div>
+            <div class="result-subdiv">
+                <h1 class="title-txt">테스트 결과</h1>
+                <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">가을의 은행나무</b>입니다.</h3>
+                <img src="image/treetitle/result3.png" class="result-img">
+                <div class="result-des result-des3">
+                    <p><b class="result-tree">당신의 플로깅 나무는 "은행나무"입니다.</b><br><br>
+                        은행나무와 닮은 당신! 당신은 조용하게 지구를 사랑하는 플로거군요. 가을처럼 선선한 날씨에 건강을 챙기려 플로깅을 떠나는 것을 좋아합니다.
+                        또한 당신은 감성적인 기질이 있어 예쁜 절경을 찾아 플로깅을 떠나고 싶어합니다.
+                        가을처럼 감성적인 당신, 더욱 깨끗한 지구를 만들기 위해 플로깅을 알려주세요!</p>
+                </div>
+            </div>
+            <div class="result-subdiv">
+                <h1 class="title-txt">테스트 결과</h1>
+                <h3 class="result-title">당신의 플로깅 나무는 <b class="treename">겨울의 겨울나무</b>입니다.</h3>
+                <img src="image/treetitle/result4.png" class="result-img">
+                <div class="result-des result-des4">
+                    <p><b class="result-tree">당신의 플로깅 나무는 "겨울나무"입니다.</b><br><br>
+                        겨울나무와 닮은 당신! 당신은 차가워보이지만 지구를 향한 마음만은 따뜻한 플로거군요. 겨울처럼 차가운 날씨에 지구를 지키려 플로깅을 떠나는 것을 좋아합니다.
+                        또한 당신은 섬세한 기질이 있어 플로깅 할 거리를 완전히 깨끗하게 청소하는 플로깅을 하고싶어합니다.
+                        겨울처럼 포근한 당신, 다른 계절에도 지구를 지키기 위해 플로깅을 알려주세요!</p>
+                </div>
+            </div>
+        </div>
+
+        <!--div shatre link 보내는 div-->
+        <div class="share">
+            <button type="button" class="btn btn-outline-info share-btn">공유하기</button> <!--이건 구현 해뒀으니 무시-->
+
+        </div>
+    </div> <!--div content width 80% 영역 끝남-->
+
+    <!--div footer-->
+    <div class="footer">
+        <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
+        <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
+        <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
+        <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
+        <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
+        <br>
+        <p>이것은 푸터입니다. 위에는 학교홈페이지와 저희 깃허브입니다.(블로그일수도)</p>
+        <p>찾아오시는길: 찾아오지말아주세요.</p>
+        <p>2023 3-1학기 오픈소스웹프로젝트</p>
+    </div>
+
+    <script>
+        /*nav js*/
+        $(document).ready(function(){
+            $("#nav").mouseenter(function(){
+                $("#nav").height(200);
+                $(".nav-container-in").show();
+                });
+            $("#nav").mouseleave(function(){
+                $(".nav-container-in").hide();
+                $("#nav").height(80);
+
+            });
+        });
+
+        /*hover background js*/
+        var buttons = document.querySelectorAll('.question-a-txt');
+
+        buttons.forEach(function(button) {
+            button.addEventListener('mouseover', function() {
+                button.style.backgroundColor = '#AACB73';
+            });
+            button.addEventListener('mouseout', function() {
+                button.style.backgroundColor = 'white';
+            });
+        });
+
+        /*link js*/
+        document.querySelector('.share-btn').addEventListener('click', function() {
+            var dummy = document.createElement('input'),
+            text = window.location.href;
+
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            alert('링크가 클립보드에 복사되었습니다.');
+        });
+
+    </script>
+</body>
+</html>
