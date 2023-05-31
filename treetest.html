@@ -20,18 +20,22 @@
     <!--div nav-->
     <div id="nav">
         <ul class="nav-container">
-            <li class="nav-home"><img src="image/logo2.png" onClick="location.href='main.html'" width="250" height="50"></li>
+            
+            <li class="nav-home"><img src="image/logo2.png" onClick="location.href='main.html'" width="250" height="60"></li>
             <li class="nav-item" id="act2">ACTIVITY<ul class="nav-container-in">
               <li class="nav-item-in">SELF CHECK</li>
               <li class="nav-item-in">PLOGGING COURSE</li>
-        </ul></li>
+            </ul></li>
+  
             <li class="nav-item" id="act1">COMUNITY<ul class="nav-container-in">
               <li class="nav-item-in">공지사항</li>
-              <li class="nav-item-in">게시판</li>
-        </ul></li>
+              <li class="nav-item-in">자유게시판</li>
+            </ul></li>
+            
             <li class="nav-item">ABOUT US</li>
-            <li><button type="button" style="margin-left:600px;" id="loginbt" class="btn btn-outline-primary" onClick="location.href='login.html'">LOGIN</button></li>
+            <li class="nav-item">TREE TEST</li>
         </ul>
+        
     </div>
     
     <!--div content width 80% 영역-->
@@ -148,9 +152,11 @@
             </div>
         </div>
         <!--div question end-->
+        <div class="go-result">
+            <button type="button" class="btn btn-outline-success btn-lg title-btn result-btn">테스트 결과 확인하기</button>
 
-        <button type="button" class="btn btn-outline-success btn-lg title-btn result-btn">테스트 결과 확인하기</button>
-
+        </div>
+        
         <!--div result start 나무 결과 띄우는 div-->
         <div class="result">
             <div class="result-subdiv result-spring">
@@ -202,7 +208,6 @@
         <!--div shatre link 보내는 div-->
         <div class="share">
             <button type="button" class="btn btn-outline-info share-btn">공유하기</button> <!--이건 구현 해뒀으니 무시-->
-
         </div>
     </div> <!--div content width 80% 영역 끝남-->
 
@@ -213,11 +218,14 @@
         <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
         <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
         <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
-        <br>
-        <p>이것은 푸터입니다. 위에는 학교홈페이지와 저희 깃허브입니다.(블로그일수도)</p>
-        <p>찾아오시는길: 찾아오지말아주세요.</p>
-        <p>2023 3-1학기 오픈소스웹프로젝트</p>
-    </div>
+        
+        <p>2023년 3-1 오픈소스 웹소프트웨어<br>
+        (28644)충청북도 청주시 서원구 충대로 1<br>
+        (이용 문의)TrashGo@.chungbuk.ac.kr<br>
+        E-mail :TrashGo@.chungbuk.ac.kr<br>
+        <p>Copyright © TrashGo. All Rights Reserved.</p>
+        
+      </div>
 
     <script>
         var spring=0, summer=0, fall=0, winter=0;
@@ -234,25 +242,39 @@
             });
             /*test js*/
             $("#gotest").click(function(){
-                $("#q1").slideDown();
+                $("#q1").show();
+                $('html, body').scrollTop($(window).scrollTop()+600);
             });
             
             $(".a1").click(function(){
+                $("#q1").slideUp();
                 $("#q2").slideDown();
+                
             });
             $(".a2").click(function(){
+                $("#q2").slideUp();
                 $("#q3").slideDown();
             });
             $(".a3").click(function(){
+                $("#q3").slideUp();
                 $("#q4").slideDown();
             });
             $(".a4").click(function(){
+                $("#q4").slideUp();
                 $("#q5").slideDown();
             });
             $(".a5").click(function(){
+                $("#q5").slideUp();
                 $("#q6").slideDown();
             });
             $(".a6").click(function(){
+                $("#q6").slideUp();
+                $(".go-result").slideDown();
+                
+                
+            });
+            $(".result-btn").click(function(){
+                
                 $(".result").show();
                 var r = Math.max(spring, summer, fall, winter);
                 if(r==spring){
@@ -264,7 +286,8 @@
                 }else if(r==winter){
                     $(".result-winter").show();
                 }
-                
+                $(".share").show();
+                $('html, body').scrollTop($(window).scrollTop()+700);
             });
 
             $(".spring").click(function(){
