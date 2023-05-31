@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    width:100%;
+    height:100%;
+    background-image: url("image/bg2.jpg");
+    background-size: cover;
+    font-family: 'Pretendard-Regular';
+}
+
+#intro-content{
+    width:100%;
+    height:100%;
+    
+}
+
+.highlight{
+    transform:scale(1.5);
+}
+
+.trash{
+    position: absolute;
+    
+}
+
+#trash1{
+    left: 40%;
+    top: 80%;
+    transform: rotate(40deg);
+}
+
+#trash2{
+    left: 70%;
+    top: 80%;
+    transform: rotate(225deg);
+}
+
+#trash3{
+    left: 25%;
+    top: 85%;
+    transform: rotate(10deg);
+}
+
+#trash4{
+    left: 45%;
+    top: 75%;
+    transform: rotate(45deg);
+}
+
+#trash5{
+    left: 85%;
+    top: 85%;
+    transform: rotate(45deg);
+}
+
+#trash6{
+    left: 60%;
+    top: 70%;
+    transform: rotate(100deg);
+}
+
+#page1{
+    width:100%;
+    height: 1000px;
+    background-image: url("image/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: cover;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#page2{
+    width:100%;
+    height: 1000px;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: cover;
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content{
+width: 80%;
+margin: auto;
+}
+
+.title{
+background-color: #dddddd00;
+display:none;
+width: 100%;
+height: 1000px;
+margin: 0 auto;
+}
+
+
+.titletxt1{
+display: block;
+color: white;
+font-family: 'GmarketSansMedium';
+font-weight: 700;
+font-size: 100px;
+margin: 0 auto;
+text-align: center;
+}
+
+.titletxt2{
+display: block;
+color: white;
+font-family: 'GmarketSansMedium';
+font-weight: 700;
+font-size: 50px;
+margin: 0 auto;
+text-align: center;
+}
+
+.hideme{
+color:black;
+display:none;
+}
