@@ -6,46 +6,56 @@
 }
 
 body{
-    font-family: 'Pretendard-Regular';
+    font-family: 'Pretendard-Regular' !important;
 }
 
 .selfcheck{
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 200px;
-}       
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
 .bigtxt{
     text-align: center;
+    margin: auto;
     font-weight: bold;
+    font-size: xx-large;
 }
 
 .subtxt0{
     margin-top: 20px;
-    margin-bottom: 40px;
     text-align: center;
-}
-.item{
-    float: left;
-    border-radius: 30px;
-    border-color: 1px solid black;
-    margin-left: 35px;
-    margin-bottom: 20px;
-    font-size: 21px;
-    text-align: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;     
+    font-size: medium;
 }
 
-.item:hover{
-    border: 2px solid skyblue;
+.item{
+    display: inline-block;
+    text-align: center;
+    margin: auto 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    border: 1px solid #FFD4D4;
+    border-radius: 10px;
 }
 
 .item-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 20px; 
-    position:relative;
+    width: 1100px;
+    text-align: center;
+    margin: auto;
+}
+
+.title-btn{
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid green;
 }
 
 #point{
@@ -56,32 +66,19 @@ body{
     text-align: center;
     border: none;
 }
-.select{
-    margin-left: 60px;      
-}
 
 .text{
     margin-left: 60px;
 }
         
-.ds1{
-    background-color: beige;
-}
-.ds2{
-    background-color: #FFC8C8;
-}
-.ds3{
-    background-color: #DCEBFF;
-}
-.ds4{
-    background-color: #C8C8FF;
-}
-.ds5{
-    background-color: #82F9B7;
+.ds{
+    font-weight: bold;
+    font-size: medium;
+    padding-top: 20px;
 }
         
 .swal-button {
-	background-color: #FFB2D9;
+	background-color: #d4e5b1;
 	font-size: 25px;
 } 
 .pointdescription{

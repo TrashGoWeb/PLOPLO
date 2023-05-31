@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Self Check</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><!--alert창 커스텀-->
+    <link rel="stylesheet" href="treetest.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
     <link rel="stylesheet" href="selfcheck.css">
     <title>Self Check</title>
 </head>
@@ -19,7 +19,7 @@
     <div id="nav">
         <ul class="nav-container">
             
-            <li class="nav-home"><img src="image/logo.png" onClick="location.href='main.html'" width="200" height="60"></li>
+            <li class="nav-home"><img src="image/logo2.png" onClick="location.href='main.html'" width="250" height="60"></li>
             
             <li class="nav-item" id="act2">ACTIVITY<ul class="nav-container-in">
               <li class="nav-item-in">SELF CHECK</li>
@@ -28,11 +28,11 @@
   
             <li class="nav-item" id="act1">COMUNITY<ul class="nav-container-in">
               <li class="nav-item-in">공지사항</li>
-              <li class="nav-item-in">게시판</li>
+              <li class="nav-item-in">자유게시판</li>
             </ul></li>
             
             <li class="nav-item">ABOUT US</li>
-            <li><button type="button" style="margin-left:600px;" id="loginbt" class="btn btn-outline-primary" onClick="location.href='login.html'">LOGIN</button></li>
+            <li class="nav-item">TREE TEST</li>
         </ul>
         
     </div>
@@ -40,9 +40,8 @@
 
     <div class="container-fluid text-center selfcheck">
         <div class="container-fluid text-center intro">
-            <h2 class="bigtxt" style="font-size:xx-large">Self Check</h2>
-            <p class="subtxt0" style="font-size: 20px;">🖍 방법 : 자신이 실천한 활동을 클릭하고, 점수보기 버튼을 누르면 됩니다.</p>
-            <input type="button" value="점수보기" onclick="buy()" id="point">
+            <h2 class="bigtxt">Self Check</h2>
+            <p class="subtxt0"><img src="image/selfcheck/checkicon.png" class="icon">자신이 실천해본 친환경 활동을 클릭하고, 하단의 '내 환경 점수 보기' 버튼을 눌러보세요!</p>
         </div>
 
      <br><br><br><br><br><br>
@@ -50,28 +49,24 @@
     <div class="select">
         <div class="item-container">
         <div>
-            <div class="item" onclick="itemclick(this, 1, 1)"><img src="image_selfcheck/1.jpg" width="250px" height="200px"><br><p class="ds1">개인텀블러나 물병을 사용한다.</p></div>
-            <div class="item" onclick="itemclick(this, 2, 1)"><img src="image_selfcheck/2.jpg" width="250px" height="200px"><br><p class="ds1">병의 라벨과 뚜껑은 따로 버린다.</p></div>
-            <div class="item" onclick="itemclick(this, 3, 1)"><img src="image_selfcheck/3.jpg" width="250px" height="200px"><br><p class="ds1">구매 전 친환경 마크를 확인한다.</p></div>
-            
-            <div class="item" onclick="itemclick(this, 4, 1)"><img src="image_selfcheck/4.jpg" width="250px" height="200px"><br><p class="ds2">재활용품은 세척해서 버린다.</p></div>
-            <div class="item" onclick="itemclick(this, 5, 1)"><img src="image_selfcheck/5.jpg" width="250px" height="200px"><br><p class="ds2">박스의 테이프를 떼서 버린다.</p></div>
-            <div class="item" onclick="itemclick(this, 6, 1)"><img src="image_selfcheck/6.jpg" width="250px" height="200px"><br><p class="ds2">장을 볼 때 장바구니를 항상 챙긴다.</p></div>
-            
-            <div class="item" onclick="itemclick(this, 7, 1)"><img src="image_selfcheck/7.jpg" width="250px" height="200px"><br><p class="ds3">환경 관련 매체를 구독한다.</p></div>
-            <div class="item" onclick="itemclick(this, 8, 1)"><img src="image_selfcheck/8.jpg" width="250px" height="200px"><br><p class="ds3">양치컵을 사용하고 물을 절약한다.</p></div>
-            <div class="item" onclick="itemclick(this, 9, 1)"><img src="image_selfcheck/9.jpg" width="250px" height="200px"><br><p class="ds3">에너지 절약형 전구를 사용한다.</p></div>
-            
-            <div class="item" onclick="itemclick(this, 10, 1)"><img src="image_selfcheck/10.jpg" width="250px" height="200px"><br><p class="ds4">사용하지 않는 전기는 뽑는다.</p></div>
-            <div class="item" onclick="itemclick(this, 11, 1)"><img src="image_selfcheck/11.jpg" width="250px" height="200px"><br><p class="ds4">친환경 섬유 유연제를 사용한다.</p></div>
-            <div class="item" onclick="itemclick(this, 12, 1)"><img src="image_selfcheck/12.jpg" width="250px" height="200px"><br><p class="ds4">가까운 거리는 걷거나 자전거를 탄다.</p></div>
-       
-            <div class="item" onclick="itemclick(this, 13, 1)"><img src="image_selfcheck/13.jpg" width="250px" height="200px"><br><p class="ds5">필요없는 1회용품 이용을 거절한다.</p></div>
-            <div class="item" onclick="itemclick(this, 14, 1)"><img src="image_selfcheck/14.jpg" width="250px" height="200px"><br><p class="ds5">업사이클링 제품을 사용한다.</p></div>
-            <div class="item" onclick="itemclick(this, 15, 1)"><img src="image_selfcheck/15.jpg" width="250px" height="200px"><br><p class="ds5">자연 분해되는 물건을 사용한다.</p></div>
+            <div class="item" onclick="itemclick(this, 1, 1)"><img src="image/selfcheck/1.png" width="250px" height="250px"><br><p class="ds">개인텀블러나 물병을 사용한다.</p></div>
+            <div class="item" onclick="itemclick(this, 2, 1)"><img src="image/selfcheck/2.png" width="250px" height="250px"><br><p class="ds">병의 라벨과 뚜껑은 따로 버린다.</p></div>
+            <div class="item" onclick="itemclick(this, 3, 1)"><img src="image/selfcheck/3.png" width="250px" height="250px"><br><p class="ds">구매 전 친환경 마크를 확인한다.</p></div>
+            <div class="item" onclick="itemclick(this, 4, 1)"><img src="image/selfcheck/4.png" width="250px" height="250px"><br><p class="ds">재활용품은 세척해서 버린다.</p></div>
+            <div class="item" onclick="itemclick(this, 5, 1)"><img src="image/selfcheck/5.png" width="250px" height="250px"><br><p class="ds">박스의 테이프를 떼서 버린다.</p></div>
+            <div class="item" onclick="itemclick(this, 6, 1)"><img src="image/selfcheck/6.png" width="250px" height="250px"><br><p class="ds">장을 볼 때 장바구니를 항상 챙긴다.</p></div>
+            <div class="item" onclick="itemclick(this, 7, 1)"><img src="image/selfcheck/7.png" width="250px" height="250px"><br><p class="ds">환경 관련 매체를 구독한다.</p></div>
+            <div class="item" onclick="itemclick(this, 8, 1)"><img src="image/selfcheck/8.png" width="250px" height="250px"><br><p class="ds">양치컵을 사용하고 물을 절약한다.</p></div>
+            <div class="item" onclick="itemclick(this, 9, 1)"><img src="image/selfcheck/9.png" width="250px" height="250px"><br><p class="ds">에너지 절약형 전구를 사용한다.</p></div>
+            <div class="item" onclick="itemclick(this, 10, 1)"><img src="image/selfcheck/10.png" width="250px" height="250px"><br><p class="ds">사용하지 않는 전기는 뽑는다.</p></div>
+            <div class="item" onclick="itemclick(this, 11, 1)"><img src="image/selfcheck/11.png" width="250px" height="250px"><br><p class="ds">친환경 섬유 유연제를 사용한다.</p></div>
+            <div class="item" onclick="itemclick(this, 12, 1)"><img src="image/selfcheck/12.png" width="250px" height="250px"><br><p class="ds">가까운 거리는 걷거나 자전거를 탄다.</p></div>
+            <div class="item" onclick="itemclick(this, 13, 1)"><img src="image/selfcheck/13.png" width="250px" height="250px"><br><p class="ds">필요없는 1회용품 이용을 거절한다.</p></div>
+            <div class="item" onclick="itemclick(this, 14, 1)"><img src="image/selfcheck/14.png" width="250px" height="250px"><br><p class="ds">업사이클링 제품을 사용한다.</p></div>
+            <div class="item" onclick="itemclick(this, 15, 1)"><img src="image/selfcheck/15.png" width="250px" height="250px"><br><p class="ds">자연 분해되는 물건을 사용한다.</p></div>
         </div>
-
     </div> <!--item container-->
+    <button type="button" class="btn btn-outline-success btn-lg title-btn" id="gotest">내 환경 점수 보기</button>
     </div> <!--select-->
     
     <br><br>
@@ -102,6 +97,21 @@
 
 </div><!--self check 닫음-->
 
+<div class="footer">
+    <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
+    <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
+    <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
+    <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
+    <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
+    
+    <p>2023년 3-1 오픈소스 웹소프트웨어<br>
+    (28644)충청북도 청주시 서원구 충대로 1<br>
+    (이용 문의)TrashGo@.chungbuk.ac.kr<br>
+    E-mail :TrashGo@.chungbuk.ac.kr<br>
+    <p>Copyright © TrashGo. All Rights Reserved.</p>
+    
+  </div>
+
     <script>
         var state_img = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         var item_name = ["", "개인텀블러나 물병을 사용한다", "병의 라벨과 뚜껑은 따로 버린다", "구매 전 친환경 마크를 확인한다", "재활용품은 세척해서 버린다", 
@@ -112,11 +122,11 @@
         function itemclick(who, n, price){
 
             if(state_img[n]==0) {
-                who.getElementsByTagName('img')[0].src = "image_selfcheck/earth.jpg";
+                who.getElementsByTagName('img')[0].src = "image/logo2.png";
                 total_price += price;
                 state_img[n] = 1;
             }else {
-                who.getElementsByTagName('img')[0].src = "image_selfcheck/" + n.toString() + ".jpg"
+                who.getElementsByTagName('img')[0].src = "image/selfcheck/" + n.toString() + ".png"
                 total_price -= price;
                 state_img[n] = 0;
             }
@@ -193,22 +203,19 @@
 
  });
 });
+
+        /*hover background js*/
+        var buttons = document.querySelectorAll('.item');
+
+        buttons.forEach(function(button) {
+            button.addEventListener('mouseover', function() {
+                button.style.backgroundColor = '#f8dede';
+            });
+            button.addEventListener('mouseout', function() {
+                button.style.backgroundColor = '';
+            });
+        });
     </script>
 
-
-<div class="footer">
-    <a href="https://www.chungbuk.ac.kr/site/www/main.do"><img src="image/cbnu.png" height="50px"></a> 
-    <a href="https://software.cbnu.ac.kr/"><img src="image/cbnusw.png" height="50px"></a> 
-    <a href="https://github.com/dotoooo22"><img src="image/dotom.png" height="50px"></a> 
-    <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
-    <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
-    
-    <p>2023년 3-1 오픈소스 웹소프트웨어<br>
-    (28644)충청북도 청주시 서원구 충대로 1<br>
-    (이용 문의)TrashGo@.chungbuk.ac.kr<br>
-    E-mail :TrashGo@.chungbuk.ac.kr<br>
-    <p>Copyright © TrashGo. All Rights Reserved.</p>
-    
-  </div>
 </body>
 </html>
