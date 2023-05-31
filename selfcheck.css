@@ -135,10 +135,12 @@ body{
     padding-left: 10px;
     height: 150px;
     width: 100%;
-    background-color: #EDF1D6;
+    background-color: #FFD4D4;
     color:black;
 }
-
+.footer a:not(:last-of-type) {
+    margin-right: 15px;
+}
 
 #nav{
     text-align: center;
@@ -147,7 +149,7 @@ body{
     top:0;
     height: 80px;
     width: 100%;
-    background-color: #EDF1D6;
+    background-color: #FFD4D4;
     color:black;
 }
 .nav-container{
@@ -173,7 +175,7 @@ body{
     cursor: pointer;
     margin-top: 15px;
     width:250px;
-    background-color: #EDF1D6;
+    background-color: #FFD4D4;
 }
 .nav-item:hover {
     border:1px solid black;
