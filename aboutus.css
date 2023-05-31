@@ -322,6 +322,10 @@ body{
     border-radius: 20px;
 }
 
+.col-sm-4{
+    margin-top: 70px;
+}
+
 .memberpic:hover{
     border: 5px solid lightgrey;
     cursor: pointer;
@@ -401,7 +405,7 @@ body{
     text-align: left;
     padding-top: 10px;
     padding-left: 10px;
-    height: 150px;
+    height: 170px;
     width: 100%;
     background-color: #FFD4D4;
     color:black;
