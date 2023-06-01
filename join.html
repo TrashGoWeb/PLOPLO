@@ -5,81 +5,73 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
   <title>회원가입</title>
-<style>
-    
-.main {
-    width: 250px;
-    height: 300px;
-    display: flex;
-    margin:0 auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-}
-
-.logo {
-    margin-top: 0px;
-    margin-bottom: 40px;
-}
-
-#join {
-    width: 100%;
-    background-color: skyblue;
-    border-color: transparent;
-    color: white;
-}
-
-.account {
-    display: block;
-    margin-bottom: 3px;
-    padding: 3px;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-}
-
-#alert {
-    border-color: transparent;
-}
-
+  <style>
+    form{
+        width: 400px;
+        height: 600px;
+        margin:0 auto;
+        margin-top: 5%;
+        border: 1px solid rgb(243, 243, 243);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .form-control{
+        background-color: rgb(243, 243, 243);
+    }
 </style>
 </head>
 
 <body>
-    <div class="main">
-        <h1 class="logo">Join</h1>
-        <div class="container">
-            <input type="text" placeholder="이름" id="name" class="account">
-            <input type="text" placeholder="이메일" id="email" class="account">
-            <input type="text" placeholder="ID" id="id" class="account">
-            <input type="password" placeholder="Password" id="password" class="account">
-            <button id="join" class="account">join</button>
-            <p id="alert" class="account"> </p>
+    <form>
+        <img src="image/logo2.png" width="300" height="100">
+        <h2>Join</h2>
+        <br>
+        <div class="form-floating">
+            <input type="email" id="name" class="form-control" id="floatingInput1" placeholder="name@example.com">
+            <label for="floatingInput1">User Name</label>
         </div>
-    </div>   
+        <br>
+        <div class="form-floating">
+            <input type="email" id="id" class="form-control" id="floatingInput2" placeholder="name@example.com">
+            <label for="floatingInput2">Email address</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="password" id="password" class="form-control" id="floatingPassword1" placeholder="Password">
+            <label for="floatingPassword1">Password</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="password" id="password-check" class="form-control" id="floatingPassword2" placeholder="Password">
+            <label for="floatingPassword2">Password Check</label>
+        </div>
+        <br>
+        <div class="d-grid gap-2 col-12 mx-auto">
+            <button id="login" onclick="check()" class="btn btn-primary" type="button">회원가입</button>
+        </div>
+        <br><br><br>
+        
+        
+    </form>
     <script src="script.js"></script>
     
     <script>
-    const name = document.getElementById('name')
-    const email = document.getElementById('email')
-    const id = document.getElementById('id')
-    const password = document.getElementById('password')
-    const join = document.getElementById('join')
+    const name = document.getElementById('name');
+    const email = document.getElementById('id');
+    const password1 = document.getElementById('password');
+    const password2 = document.getElementById('password-check');
     
-    join.addEventListener('click', () => {
-    if( email.value === "" || id.value === "" || password.value === "" ) {
-        alert('모든 정보를 입력하세요')
+    function check(){
+        if(password1.value != password2.value){
+            alert('비밀번호가 일치하지 않습니다.');
+        }else{
+            moveLogin();
+        }
+        
     }
-    
-    else {
-        alert('회원가입 완료!')
-        window.location.href = "login.html";
-      }
-    
-
-    })
-
+    function moveLogin(){
+        window.location.href = "login.html"; //로그인 성공하면 메인페이지로 이동
+    }
     </script>
 </body>
 </html>

@@ -5,6 +5,8 @@ const titleList = document.querySelectorAll(".list-title");
 const writerList = document.querySelectorAll(".writer");
 const dateList = document.querySelectorAll(".date");
 
+var index = 1;
+
     for(let i=0; i<numList.length; i++) {
       numList[i].innerHTML = (i+1);
       titleList[i].innerHTML = "제목" + (i+1);
@@ -49,17 +51,22 @@ const dateList = document.querySelectorAll(".date");
 
       });
       $(function plo() {
-          $("#run").animate({"left":"20%"}, 2000, function a(){
-            $("#ani1").hide();
+          $("#run").animate({"left":"25%"}, 2000, function a(){
+            document.getElementById("ani1").src = "image/blank.png";
           });
-          $("#run").animate({"left":"60%"}, 2000, function b(){
-            $("#ani2").hide();
+          $("#run").animate({"left":"68%"}, 2000, function b(){
+            document.getElementById("ani2").src = "image/blank.png";
           });
           $("#run").animate({"left":"90%"}, 2000, null);
-
-          $("#run").animate({"left":"0%"}, 2000, function c(){
-            $("#ani1").show();
-            $("#ani2").show();
+          
+          $("#run").animate({"left":"0%"}, 0, function c(){
+            document.getElementById("ani1").src = "image/trash" + index + ".png";
+            document.getElementById("ani2").src = "image/trash" + index + ".png";
+            if(index<6){
+              index++;
+            }else{
+              index=1;
+            }
           });
 
           
