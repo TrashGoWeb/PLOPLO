@@ -126,7 +126,7 @@ body{
 }
 
 .ploggingdiv{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .ploggingin{
@@ -179,6 +179,8 @@ body{
     cursor: pointer;
     border-radius: 20px;
     position: relative;
+    width: 350px;
+    height: 350px;
 
 }
   
