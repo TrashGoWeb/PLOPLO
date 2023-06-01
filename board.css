@@ -323,11 +323,17 @@ a {
     text-align: left;
     padding-top: 10px;
     padding-left: 10px;
-    height: 150px;
+    height: 180px;
     width: 100%;
     background-color: #FFD4D4;
     color:black;
-   
+}
+
+.footerdes{
+    margin-top: 10px;
+}
+.footer a:not(:last-of-type) {
+    margin-right: 15px;
 }
 
 
