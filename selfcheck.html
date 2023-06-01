@@ -83,7 +83,7 @@
     <a href="https://github.com/sohenney"><img src="image/henny.png" height="50px"></a> 
     <a href="https://github.com/leesj6368"><img src="image/ju.png" height="50px"></a> 
     
-    <p>2023년 3-1 오픈소스 웹소프트웨어<br>
+    <p class="footerdes">2023년 3-1 오픈소스 웹소프트웨어<br>
         (28644)충청북도 청주시 서원구 충대로 1<br>
         (이용 문의) PLOPLO@chungbuk.ac.kr<br>
         E-mail : PLOPLO@chungbuk.ac.kr<br>
@@ -143,8 +143,8 @@
             if (scoreImage === "") {
                 var messageElement = document.createElement("p");
                 messageElement.textContent = "선택된 것이 없습니다" ;
-                messageElement.style.color="red";
-                messageElement.style.fontSize="30px";
+                messageElement.style.color="black";
+                messageElement.style.fontSize="medium";
                 resultElement.appendChild(messageElement);
                 return;
     }
@@ -158,19 +158,27 @@
 
             // 점수를 출력하는 요소를 가져와서 점수를 설정.
             var scoreElement = document.createElement("p");
-            scoreElement.textContent = "나의 점수 : " + score + "점";
-            scoreElement.style.fontSize="30px";
+            scoreElement.textContent = "나의 환경 점수 : " + score + "점";
+            scoreElement.style.fontSize="x-large";
+            scoreElement.style.fontWeight = "bold";
 
             // 선택된 내용을 표시하는 요소를 가져와서 선택된 내용을 설정합니다.
             var selectedElement = document.createElement("p");
             selectedElement.textContent = "참여한 활동 : " + "" + buylist + "\n"; // 선택된 내용을 buylist에 저장해야 합니다.
-            selectedElement.style.color="blue";
-            selectedElement.style.fontSize="15px";
+            selectedElement.style.width = "500px";
+            selectedElement.style.border = "1px solid #FFD4D4"
+            selectedElement.style.borderRadius = "10px";
+            selectedElement.style.padding = "20px 20px"
+            selectedElement.style.textAlign = "center";
+            selectedElement.style.margin = "auto";
+            selectedElement.style.marginTop = "20px"
+            selectedElement.style.color="black";
+            selectedElement.style.fontSize="small";
 
             // 결과 요소에 이미지, 점수, 선택된 내용을 추가   
             resultElement.appendChild(scoreElement);
-            resultElement.appendChild(selectedElement);
             resultElement.appendChild(imageElement);
+            resultElement.appendChild(selectedElement);
 }
 
             // 버튼 클릭 시 showScore() 함수 호출
