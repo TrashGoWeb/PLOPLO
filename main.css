@@ -23,6 +23,7 @@ body{
     margin-top: 80px;
 }
 
+/* div nav start */
 #nav{
     text-align: center;
     position: fixed;
@@ -35,7 +36,6 @@ body{
 }
 
 .nav-container{
-    
     display: flex;
     justify-content: left;
     text-align: left;
@@ -67,6 +67,36 @@ body{
     border:1px solid black;
   
 }
+
+#loginbt{
+    margin-top: 20px;
+}
+
+.slider{
+    margin:0 auto;
+     width: 60%;
+}
+
+.nav-container-in{
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-item-in{
+    text-align: left;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top:15px;
+    padding-top:10px;
+    width:250px;
+    height:50px;
+    background-color: transparent;
+    color:black;
+}
+
+/* div nav end */
 
 .title{
     margin-top: 80px;
