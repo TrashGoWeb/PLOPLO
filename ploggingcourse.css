@@ -92,9 +92,21 @@ body{
     height:50px;
     background-color: transparent;
     color:black;
+
+}
+
+.nav-item-in a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-item a{
+    color: black;
+    text-decoration: none;
 }
 
 /* div nav end */
+
 
 /* div content start */
 .titletxt{
