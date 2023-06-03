@@ -5,15 +5,6 @@ const titleList = document.querySelectorAll(".list-title");
 const writerList = document.querySelectorAll(".writer");
 const dateList = document.querySelectorAll(".date");
 
-var index = 1;
-
-    for(let i=0; i<numList.length; i++) {
-      numList[i].innerHTML = (i+1);
-      titleList[i].innerHTML = "제목" + (i+1);
-      writerList[i].innerHTML = "작성자" + (i+1);
-      dateList[i].innerHTML = "2023.5.12";
-    }
-
     google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
