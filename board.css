@@ -376,11 +376,6 @@ a {
     background-color: #FFD4D4;
 }
 
-.nav-item:hover {
-    border:1px solid black;
-  
-}
-
 #loginbt{
     margin-top: 20px;
 }

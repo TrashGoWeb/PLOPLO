@@ -63,11 +63,6 @@ body{
     background-color: #FFD4D4;
 }
 
-.nav-item:hover {
-    border:1px solid black;
-  
-}
-
 #loginbt{
     margin-top: 20px;
 }
@@ -85,7 +80,7 @@ body{
 }
 
 .nav-item-in{
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     font-size: 20px;
     margin-top:15px;
