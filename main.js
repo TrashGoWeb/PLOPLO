@@ -4,6 +4,7 @@ const numList = document.querySelectorAll(".num");
 const titleList = document.querySelectorAll(".list-title");
 const writerList = document.querySelectorAll(".writer");
 const dateList = document.querySelectorAll(".date");
+var scroll_state = 1;
 
     google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -63,6 +64,50 @@ const dateList = document.querySelectorAll(".date");
           
           plo();
       });
+      $(window).scroll(function(){
+        var scrT = $(window).scrollTop();
+        //console.log(scrT); //스크롤 값 확인용
+        if(scrT == $(document).height() - $(window).height()){
+          //스크롤이 끝에 도달했을때 실행될 이벤트
+          if(scroll_state==1) {
+            $("#scroll-run").slideDown(100, null);
+            $("#scroll-ani").slideDown(100, function(){
+              $('html, body').scrollTop($(window).scrollTop()-1);
+              scroll_state++;
+            });
+            
+          }else if(scroll_state==2) {
+            $("#scroll-run").animate({"left":"40%"}, 1000, function(){
+              $('html, body').scrollTop($(window).scrollTop()-1);
+              scroll_state++;
+            });
+
+          }else if(scroll_state==3){
+            //document.getElementById("scroll-ani").src = "image/blank.png";
+            $("#scroll-ani").slideUp(100, function(){
+              $('html, body').scrollTop($(window).scrollTop()-1);
+              scroll_state++;
+            });
+            
+
+          }else if(scroll_state==4){
+            $("#scroll-run").animate({"left":"90%"}, 1000, function(){
+              document.getElementById("scroll-run").src = "image/blank.png";
+              $('html, body').scrollTop($(window).scrollTop()-1);
+              scroll_state++;
+            });
+
+          }else if(scroll_state==5){
+            $("#finish").slideDown();
+          }
+          
+          
+        } else {
+          //아닐때 이벤트없읔 
+        }
+      });
+     
+
     });
     
     

@@ -220,3 +220,27 @@ table{
     margin-top: 40px;
     border-radius: 20px;
 }
+
+.animation2{
+    background-image: url("image/scrollback.png");
+    background-size: contain;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding: 50px 50px 50px 50px;
+}
+#scroll-ani{
+    display: none;
+}
+#scroll-run{
+    display: none;
+}
+#finish{
+    display: none;
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-weight: 700;
+    font-size: 100px;
+    margin-top: 10%;
+}
