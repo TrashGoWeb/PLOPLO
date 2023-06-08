@@ -85,7 +85,7 @@ var scroll_state = 1;
             
 
           }else if(scroll_state==4){
-            $("#scroll-run").animate({"left":"90%"}, 1000, function(){
+            $("#scroll-run").animate({"left":"80%"}, 1000, function(){
               document.getElementById("scroll-run").src = "image/blank.png";
               $('html, body').scrollTop($(window).scrollTop()-1);
               scroll_state++;
