@@ -8,7 +8,7 @@ var scroll_state = 1;
 
     google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
+      
       
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
@@ -52,18 +52,12 @@ var scroll_state = 1;
           $("#run").animate({"left":"90%"}, 2000, null);
           
           $("#run").animate({"left":"0%"}, 0, function c(){
-            document.getElementById("ani1").src = "image/trash" + index + ".png";
-            document.getElementById("ani2").src = "image/trash" + index + ".png";
-            if(index<6){
-              index++;
-            }else{
-              index=1;
-            }
+            document.getElementById("ani1").src = "image/trash2.png";
+            document.getElementById("ani2").src = "image/trash2.png";
           });
-
-          
           plo();
       });
+
       $(window).scroll(function(){
         var scrT = $(window).scrollTop();
         //console.log(scrT); //스크롤 값 확인용
