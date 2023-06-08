@@ -205,7 +205,11 @@
                         겨울처럼 포근한 당신, 다른 계절에도 지구를 지키기 위해 플로깅을 알려주세요!</p>
                 </div>
             </div>
+            <div id="column_chart_div1">
+            
+            </div>
         </div>
+        
 
         <!--div shatre link 보내는 div-->
         <div class="share">
@@ -230,6 +234,32 @@
       </div>
 
     <script>
+        google.charts.load('current', {packages: ['corechart']});
+        function columnChart1() {
+            var arr = [
+            ['나무', '선택지수', { role: 'style' }],
+            ['벚꽃나무', spring, 'color: #FFD4D4'],
+            ['수국나무', summer, 'color: #937cc1'],
+            ['은행나무', fall, 'color: #f1d26a'],
+            ['겨울나무', winter, 'color: grey']
+        ];
+
+
+            var dataTable = google.visualization.arrayToDataTable(arr);
+            var options = {
+                title: '나의 테스트 데이터',
+                width: 600,
+                height: 400,
+                series: {
+                    0: { color: 'lightgrey' }
+                }
+                };
+            var objDiv = document.getElementById('column_chart_div1');
+            var chart = new google.visualization.ColumnChart(objDiv);
+
+            chart.draw(dataTable, options);
+            }
+        
         var spring=0, summer=0, fall=0, winter=0;
         $(document).ready(function(){
             /*nav js*/
@@ -288,6 +318,7 @@
                 }else if(r==winter){
                     $(".result-winter").show();
                 }
+                columnChart1();
                 $(".share").show();
                 $('html, body').scrollTop($(window).scrollTop()+700);
             });

@@ -211,11 +211,6 @@ body{
     margin: auto;
     margin-top: 70px;
 }
-
-
-.result-subdiv{
-    /*display: none; 이거는 민정 구조 확인 하는 용도로 쓰고 js 작업 시작하면 none으로 해놓고 js 통해서 result-subdiv 중 value 값 통해서 아무거나 보이게끔*/
-}
 .result-spring{
     display: none;
 }
@@ -268,6 +263,12 @@ body{
 .result-tree{
     font-size: medium;
 }
+
+#column_chart_div1 {
+    text-align: center;
+    margin-left: 28%;
+}
+
 /* div result end */
 
 /* div share start */
